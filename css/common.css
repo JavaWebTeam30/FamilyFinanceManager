@@ -59,6 +59,10 @@ header{
     background-color: rgba(0,0,0,0.3);
     border-radius: 1em;
     padding: 50px 30px;
+    color: white;
+}
+#login-form a{
+    color: white;
 }
 #username,#password{
     display: block; 
@@ -88,6 +92,17 @@ p.wrong-tip{
 }
 #submit:hover{
     background-color:rgba(0,134,139,0.95);
+}
+#register-form{
+    position: absolute;
+    width: 20%;
+    height:400px; 
+    top: 20%;
+    left: 40%;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 1em;
+    padding: 50px 30px;
+    color: white;
 }
 footer{
     position: fixed;

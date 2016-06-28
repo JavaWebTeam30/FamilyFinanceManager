@@ -3,7 +3,7 @@ function setFixLi(){
     $("ul.third-level li[class!='fix']").each(function(){
         temp+=$(this).innerWidth();
     })
-    $("ul.third-level li.fix").css("width",$("ul.third-level").width()-temp-10);
+    $("ul.third-level li.fix").css("width",$("ul.third-level").width()-temp-3);
 }
 
 function changoTab(event){
@@ -19,6 +19,7 @@ $(document).ready(function(){
     });
     setFixLi();
     $(window).resize(setFixLi);
-    $("#what div[name!='"+$("ul.third-level li.current").attr("alt")+"']").hide();
+    $("#what >div[name!='"+$("ul.third-level li.current").attr("alt")+"']").hide();
     $("ul.third-level li").click(changoTab);
+    $("ul.third-level li[class='fix']").unbind("click");
 });
