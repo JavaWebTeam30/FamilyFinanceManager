@@ -4,11 +4,12 @@ input.search-btn{
     border: none;
     background-color: white;
     color: black;
+    border: 0.5px solid lightgrey;
 }
-#form2,#form1{
+#form2,#form1,#form3{
     padding-left:5px; 
 }
-#form2-name,#form2-num,#form1-date{
+#form2-name,#form2-num,#form1-date,#form3-ID,#form3-name,#form3-num{
     border:1px solid lightgray;
     width: 150px;
     height: 2em;

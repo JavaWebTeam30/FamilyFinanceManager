@@ -14,22 +14,32 @@
 </head>
 <body>
     <header>
-        <div id="logo"><img src="../img/logo.png"></div>
+        <div id="logo"><img src="../img/logo.png" alt=""></div>
         <div id="system-title">家庭理财系统</div>
     </header>
     <div id=center>
-        <form action="#" id="login-form" method="post">
+        <form action="#" id="login-form" method="post" autocomplete="off">
             <input type="text" id="username" placeholder="请输入用户名" tabindex="2"></input><br>
             <input type="password" id="password" placeholder="请输入密码" tabindex="2"></input><br>
             <p class="wrong-tip"></p>
             <!--<p class="wrong-tip">用户名或密码错误</p>-->
             <input type="submit" value="登    录" id="submit"></input>
-        </form>
+            <br>
+            <a href="./register.html">新用户?  点此注册</a>
+       </form>
     </div>
     <footer>
         <div>power by LZAHYY</div>
     </footer>
     <script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $("#login-form").submit(function(){
+            if(!$("#username").val()||!$("#password").val()){
+                $("#login-form p.wrong-tip").text("用户名或密码不能为空");
+                return false;
+            }
+        });
+    </script>
 </body>
 </html>
