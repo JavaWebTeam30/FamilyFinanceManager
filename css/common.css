@@ -22,7 +22,7 @@ header{
     font-size: 2.5em;
 }
 #logo{
-    width: 3em;
+    width: auto;
     height: 100%;
     float: left;
 }
@@ -30,7 +30,6 @@ header{
     height: 100%;
     float: left;
     margin: 0px 20px;
-    line-height: 48px;
 }
 #sign-out{
     height: 100%;
@@ -64,7 +63,8 @@ header{
 #login-form a{
     color: white;
 }
-#username,#password{
+#username,#password,#password-again{
+    color: black;
     display: block; 
     border:1px solid lightgray;
     width: 100%;
@@ -73,7 +73,7 @@ header{
     background: rgba(255,255,255,0.9);
     transition: all 0.2s linear;
 }
-#username:focus,#password:focus{
+#username:focus,#password:focus,#password-again:focus{
     border: 1px solid lightseagreen;
 }
 p.wrong-tip{
@@ -96,7 +96,7 @@ p.wrong-tip{
 #register-form{
     position: absolute;
     width: 20%;
-    height:400px; 
+    height:350px; 
     top: 20%;
     left: 40%;
     background-color: rgba(0,0,0,0.3);

@@ -14,11 +14,16 @@
 </head>
 <body>
     <header>
-        <div id="logo"><img src="../img/logo.png"></div>
+        <div id="logo"><img src="../img/logo.png" alt=""></div>
         <div id="system-title">家庭理财系统</div>
     </header>
     <div id=center>
-        <form id="register-form" action="" method="get">
+        <form id="register-form" action="" method="get" autocomplete="off">
+             <input type="text" id="username" placeholder="请输入用户名" tabindex="2"></input><br>
+             <input type="password" id="password" placeholder="请输入密码" tabindex="2"></input><br>
+             <input type="password" id="password-again" placeholder="再次输入密码" tabindex="2"></input><br>
+            <p class="wrong-tip"></p>
+            <input type="submit" value="注 册" id="submit"></input>
         </form>
     </div>
     <footer>
@@ -26,5 +31,24 @@
     </footer>
     <script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $("#password-again,#password").blur(function(){
+             if($("#password").val()!=$("#password-again").val()){
+                $("#register-form p.wrong-tip").text("两次密码输入不同");
+            }else{
+                $("#register-form p.wrong-tip").text("");
+            }
+        });
+        $("#register-form").submit(function(event){
+            if(!$("#username").val()){
+               $("#register-form p.wrong-tip").text("用户名不能为空");
+                return false 
+            }
+            if($("#password").val()!=$("#password-again").val()){
+                $("#register-form p.wrong-tip").text("两次密码输入不同");
+                return false;
+            }
+        });
+    </script>
 </body>
 </html>
