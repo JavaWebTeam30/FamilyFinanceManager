@@ -6,6 +6,12 @@ function setFixLi(){
     $("ul.third-level li.fix").css("width",$("ul.third-level").width()-temp-10);
 }
 
+function changoTab(event){
+    $("#what div[name='"+$("ul.third-level li.current").attr("alt")+"']").hide();
+    $("ul.third-level li.current").attr("class","");
+    $(this).attr("class","current");
+    $("#what div[name='"+$("ul.third-level li.current").attr("alt")+"']").show();
+}
 $(document).ready(function(){
     $("ul.tow-level").hide();
     $("ul span").click(function(event){
@@ -13,4 +19,6 @@ $(document).ready(function(){
     });
     setFixLi();
     $(window).resize(setFixLi);
+    $("#what div[name!='"+$("ul.third-level li.current").attr("alt")+"']").hide();
+    $("ul.third-level li").click(changoTab);
 });
