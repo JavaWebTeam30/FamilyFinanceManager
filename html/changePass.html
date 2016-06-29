@@ -52,62 +52,36 @@
                 </li>
             </ul>
         </div>
-        
         <div id=right>
                 <nav>
                 <span class="nav-first"><img src="../img/home.png"><a href="./main.html"> 主页</a></span>
-                <span class="nav-second">> <a href="">收入信息维护</a></span>
+                <span class="nav-second">> <a href="">个人信息管理</a></span>
                 <span class="nav-third"></span>
                 </nav>
                 <ul class=third-level>
-                    <li class="current" alt="income-list"><a href="javascript:;">收入列表</a></li>
-                    <li class="" alt="modify"><a href="javascript:;">修改收入条目</a></li>
+                    <li class=""><a href="userManager.html">用户信息修改</a></li>
+                    <li class="current" alt="changePass"><a href="">密码修改</a></li>
                     <li class="fix"></li>
                 </ul>
                 <div id="what">
-                    <div name="income-list">
-                        <br><br>
-                        <form id="form1" action="" method="get">
-                            <input type="text" name="date" id="form1-date" placeholder="按日期搜索" readonly="readonly">
-                            <input type="submit" value="搜索" class="search-btn">
-                        </form>
-                        <table class="table table-striped">                          
-                             <caption><h3 style="text-align: center;">收入明细<h3></caption>
-                            <thread>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>名称</th>
-                                    <th>金额</th>
-                                    <th>时间</th>
-                                    <th>操作</th>
-                                </tr>
-                            </thread>
-                            <tbody >
-                                <tr ><td>0001</td><td>工资</td><td>2000</td><td>2016-06-29 </td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
-                                <tr><td>0002</td><td>奖金</td><td>3000</td><td>2016-06-31</td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
-                                 <tr><td>0003</td><td>捡钱</td><td>5</td><td>2016-07-01</td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
-                            </tbody>
-                        </table>
-                        <form id=form2 action="" method="get">
-                            <fieldset>
-                            <legend><h4>添加记录</h4></legend>
-                            <input type="text" name="name" id="form2-name" placeholder="收入来源"></input>
-                            <input type="text" name="num" id="form2-num" placeholder="金额"></input>
-                            <input type="submit" value="提交" class="search-btn" ></input>
-                            </fieldset>
-                        </form>
-                    </div>
-                    <div name="modify">
-                        <form id="form3"     action="" method="get">
-                            <fieldset>
-                            <legend><h4>修改记录</h4></legend>
-                            编号:<input type="text" name="ID" id="form3-ID" placeholder="记录ID"></input><br><br>
-                            名称:<input type="text" name="name" id="form3-name" placeholder="收入来源"></input><br><br>
-                            金额:<input type="text" name="num" id="form3-num" placeholder="金额"></input><br><br>
-                            <input type="submit" value="提交" class="search-btn" ></input>
-                            </fieldset>
-                        </form>
-                    </div>
+                    <div name="changePass">
+                    <br><br>               
+                    <form action="" method="post">
+                        <div align="center">
+                            <label class="lab">新密码</label>
+                            <input type="password" name="">
+                        </div>
+                        <div align="center">
+                            <label class="lab">确认密码</label>
+                            <input type="password" name="">
+                        </div>
+                        <div align="center">
+                            <input type="submit" name="submit" value="修改密码">
+                        </div>
+                        
+                    </form>
+
+                </div>
                 </div>
         </div>
         </div>
