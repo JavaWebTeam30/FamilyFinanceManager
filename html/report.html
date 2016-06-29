@@ -76,46 +76,53 @@
                         </div>
 
                         <div id="reportForm-chooseDate" align="center">
-                            <label class="lab" >起始时间</label>
+                            <label class="lab" >查询月份</label>
                             <input class="datainp" id="indate_1" type="text" value="" placeholder="选择时间" readonly >
 
-                            <label class="lab">结束时间</label>
-                            <input class="datainp" id="indate_2" type="text" value="" 
-                            placeholder="选择时间" readonly >
 
-                            <input  type="radio" name="gender" value="female" checked="checked">收入查询
-                            <input  type="radio" name="gender" value="male" checked="checked" >支出查询
+                            <input  type="radio" name="query_search" value="query_in" >收入查询
+                            <input  type="radio" name="query_search" value="query_out" >支出查询
+                            <input  type="radio" name="query_search" value="query_inout" checked="checked"> 收支查询
                             <input class="button" type="submit" value="查询" >
                         </div>
                         <div id="reportForm-table">
                             <table class="table table-striped">
                                 <thread>
                                     <tr>
-                                        <th>时间</th>
-                                        <th>名称</th>
-                                        <th>金额(元)</th>
+                                        <th>收支类型</th>
+                                        <th>收入来源\支出去向</th>
+                                        <th>收支者</th>
+                                        <th>收支时间</th>
+                                        <th>收支金额</th>
+                                        <th>备注</th>
                                     </tr>
                                 </thread>
 
                                 <tbody>
                                     <tr>
-                                        <td>2016-1-2</td>
                                         <td>工资收入</td>
-                                        <td>3000</td>
+                                        <td>华科</td>
+                                        <td>小明</td>
+                                        <td>2016-1-6</td>
+                                        <td>+7000</td>
+                                        <td>无</td>
                                     </tr>
                                 </tbody>
 
                                 <tbody>
                                     <tr>
-                                        <td>2016-1-5</td>
-                                        <td>股票收入</td>
-                                        <td>5000</td>
+                                        <td>其他</td>
+                                        <td>旅游</td>
+                                        <td>小花</td>
+                                        <td>2016-1-7</td>
+                                        <td>-3000</td>
+                                        <td>无</td>
                                     </tr>
                                 </tbody>
 
                                 <tbody>
                                     <tr>
-                                        <td colspan="3" align="right">总金额:8000</td>
+                                        <td colspan="6" align="right">总收支:+4000</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -141,14 +148,9 @@
     <script type="text/javascript">
         jeDate({
             dateCell:"#indate_1",
-            format:"YYYY-MM-DD hh:mm",
+            format:"YYYY-MM ",
             isTime:true,
             minDate:"2016-1-1 00:00:00"
-        })
-        jeDate({
-            dateCell:"#indate_2",
-            format:"YYYY-MM-DD hh:mm",
-            isTime:true
         })
         </script>
     </body>

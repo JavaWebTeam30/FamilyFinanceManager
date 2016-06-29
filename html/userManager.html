@@ -68,39 +68,66 @@
                      <div name="userInfo_change">
                     <br><br>
                         
-                    <form action="" method="post">
-                    <div  align="center">
-                        <label class="lab">姓名</label>
-                        <input class="datainp" type="text" name="name" id="name" placeholder="小明"></input>
-                    </div>
+                    <form action="" method="post" >
+                    <table class="table table-triped" width="80%" align="center">
+                    <tbody >
+                        <tr>
+                            <td align="right" width="50%">姓名</td>
+                            <td ><input type="text" name="name" placeholder="小明" ></td>
+                        </tr>
+                    </tbody>
 
+                    <tbody >
+                        <tr>
+                            <td align="right">银行账号</td>
+                            <td><input type="text" name="bankId" placeholder="320226121234555"></td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td align="right">工资</td>
+                            <td><input type="text" name="" placeholder="6000"></td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td align="right">家庭称呼</td>
+                            <td>
+                                <select name="">
+                                    <option value="father">父亲</option>
+                                    <option value="mother">母亲</option>
+                                    <option value="son">儿子</option>
+                                    <option value="daughter">女儿</option>
+                                    <option value="grandpa">爷爷</option>
+                                    <option value="grandma">奶奶</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td align="right">年龄</td>
+                            <td ><input type="number" name="" placeholder="20" ></td>
+                        </tr>
+                    </tbody>
                     
+                    <tbody>
+                        <tr>
+                            <td align="right">身份证号</td>
+                            <td><input type="text" name="" placeholder="320882XXXXXXXXXX" ></td>
+                        </tr>
+                    </tbody>
 
-                    <div align="center">
-                        <label class="lab">出生日期</label>
-                        <input class="datainp" type="text" name="birth" id="date_1" placeholder="出生日期">
-                    </div>
+                    <tbody>
+                        <tr>
+                            <td colspan="2" align="center"><input type="submit" name="submit" value="提交修改"></td>
+                        </tr>
+                    </tbody>
 
-                    <div align="center">
-                        <label class="lab">身份证号</label>
-                        <input class="datainp" type="text" name="IdCard" id="IdCard" placeholder="XXX">
-                    </div>
-
-                    <div align="center">
-                        <label class="lab">email</label>
-                        <input class="datainp" type="text" name="email" id="em" placeholder="XXX@XXX.com">
-                    </div>
-
-                    <div align="center">
-                        <label class="lab">性别</label>
-                        <input  type="radio" name="gender" value="female" >男
-                        <input  type="radio" name="gender" value="male" checked="checked" >女
-                    </div>
-
-                    <div align="center">
-                         <input type="submit" name="submit" value="提交">
-                    </div>
-                   
+                    </table >
                     </form>
                 </div>
                 </div>
