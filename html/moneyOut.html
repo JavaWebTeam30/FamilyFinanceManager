@@ -19,7 +19,7 @@
     <header>
         <div id="logo"><img src="../img/logo.png" alt=""></div>
         <div id="system-title">家庭理财系统</div>
-        <div id="sign-out"><img src="../img/sign_out.png"> 注销</div>
+        <div id="sign-out"><a href="login.html"><img src="../img/sign_out.png"> 注销</a></div>
     </header>
     <div id=center>
         <div id="content">
@@ -29,7 +29,7 @@
                     <span><img src="../img/person.png"> 用 户 管 理</span>
                     <ul class="tow-level">
                         <li><a href="./userManager.html">用户个人信息管理</a></li>
-                        <li><a href="./newUser.html">用户管理</a></li>
+                        <li><a href="./user.html">用户管理</a></li>
                     </ul>
                 </li>
                 <li>
@@ -62,48 +62,70 @@
                 <ul class=third-level>
                     <li class="current" alt="outCome-list"><a href="javascript:;">支出列表</a></li>
                     <li class="" alt="modify"><a href="javascript:;">修改支出条目</a></li>
+                    <li class="" alt="add"><a href="javascript:;">添加支出条目</a></li>
                     <li class="fix"></li>
                 </ul>
                 <div id="what">
                     <div name="outCome-list">
                         <br><br>
                         <form id="form1" action="" method="get">
-                            <input type="text" name="date" id="form1-date" placeholder="按日期搜索" readonly="readonly">
-                            <input type="submit" value="搜索" class="search-btn">
+                            <input class="date" type="text" name="date" id="form1-date" placeholder="按日期搜索" readonly="readonly">
+                            <input type="submit" value="搜索" class="submit-btn">
                         </form>
                         <table class="table table-striped">                          
-                             <caption><h3 style="text-align: center;">支出明细<h3></caption>
+                             <caption><h3 style="text-align: center;">收入明细<h3></caption>
                             <thread>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>名称</th>
-                                    <th>金额</th>
-                                    <th>时间</th>
-                                    <th>操作</th>
+                                    <th>支出类型</th>
+                                    <th>支出者</th>
+                                    <th>支出金额</th>
+                                    <th>支出日期</th>
+                                    <th>支出用途</th>
+                                    <th>相关备注</th>
+                                     <th>操作</th>
                                 </tr>
                             </thread>
                             <tbody >
-                                <tr ><td>0001</td><td>买菜</td><td>50</td><td>2016-06-29 </td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
-                                <tr><td>0002</td><td>买书</td><td>120</td><td>2016-06-31</td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
+                                <tr ><td>税收</td><td>Dad</td><td>500</td><td>2016-06-29 </td><td>缴税</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
+                                <tr><td>医疗</td><td>son</td><td>100</td><td>2016-06-31</td><td>看病</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
                             </tbody>
                         </table>
-                        <form id=form2 action="" method="get">
+                        </div>
+                    <div name="modify">
+                        <form id="form3"  action="" method="post">
                             <fieldset>
-                            <legend><h4>添加记录</h4></legend>
-                            <input type="text" name="name" id="form2-name" placeholder="支出去向"></input>
-                            <input type="text" name="num" id="form2-num" placeholder="金额"></input>
-                            <input type="submit" value="提交" class="search-btn" ></input>
+                            <legend><h4>修改记录</h4></legend>
+                            支出类型:<select name="type" id="form3-type">
+                                                <option value="税收">税收</option>
+                                                <option value="衣食住行">衣食住行</option>
+                                                <option value="医疗">医疗</option>
+                                                <option value="其他">其他</option>
+                                            </select><br><br>
+                            支出人员:<input type="text" name="name" id="form3-name" placeholder=" 支出人员"></input><span style="color: red"> *</span><br><br>
+                            支出金额:<input type="text" name="num" id="form3-num" placeholder="金额"></input><span style="color: red"> *</span><br><br>
+                            支出日期:<input class="date" type="text" name="date" id="form3-date" placeholder="支出日期" readonly="readonly"><span style="color: red"> *</span><br><br>
+                            支出用途:<input type="text" name="source" id="form3-source"  placeholder="支出用途"></input><span style="color: red"> *</span><br><br>
+                            相关备注:<input type="text" name="remark" id="form3-remark" placeholder="相关备注"></input><span style="color: red"> *</span><br><br>
+                            <input type="submit" value="提交" class="submit-btn" ></input>
                             </fieldset>
                         </form>
                     </div>
-                     <div name="modify">
-                        <form id="form3"     action="" method="get">
-                            <fieldset>
-                            <legend><h4>修改记录</h4></legend>
-                            编号:<input type="text" name="ID" id="form3-ID" placeholder="记录ID"></input><br><br>
-                            名称:<input type="text" name="name" id="form3-name" placeholder="收入来源"></input><br><br>
-                            金额:<input type="text" name="num" id="form3-num" placeholder="金额"></input><br><br>
-                            <input type="submit" value="提交" class="search-btn" ></input>
+                    <div name="add">
+                    <form id="form2" action="" method="post">
+                        <fieldset>
+                            <legend><h4>添加记录</h4></legend>
+                            支出类型:<select name="type" id="form2-type">
+                                                <option value="税收">税收</option>
+                                                <option value="衣食住行">衣食住行</option>
+                                                <option value="医疗">医疗</option>
+                                                <option value="其他">其他</option>
+                                            </select><br><br>
+                            支出人员:<input type="text" name="name" id="form2-name"  placeholder="支出人员"></input><span style="color: red"> *</span><br><br>
+                            支出金额:<input type="text" name="num" id="form2-num" placeholder="金额"></input><span style="color: red"> *</span><br><br>
+                            支出日期:<input class="date" type="text" name="date" id="form2-date" placeholder="支出日期" readonly="readonly"><span style="color: red"> *</span><br><br>
+                            支出用途:<input type="text" name="source" id="form2-source" placeholder="支出用途"></input><span style="color: red"> *</span><br><br>
+                            相关备注:<input type="text" name="remark" id="form2-remark"  placeholder="相关备注"></input><span style="color: red"> *</span><br><br>
+                            <input type="submit" value="提交" class="submit-btn" ></input>
                             </fieldset>
                         </form>
                     </div>

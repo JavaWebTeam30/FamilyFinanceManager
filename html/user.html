@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>用户管理</title>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/user.css">
+    <!--[if lte IE 9]>
+    <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="../js/selectivizr-master/selectivizr.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header>
+        <div id="logo"><img src="../img/logo.png" alt=""></div>
+        <div id="system-title">家庭理财系统</div>
+        <div id="sign-out"><img src="../img/sign_out.png"> 注销</div>
+    </header>
+    <div id=center>
+        <div id="content">
+        <div id="left">
+            <ul class="one-level">
+                <li>
+                    <span><img src="../img/person.png"> 用 户 管 理</span>
+                    <ul class="tow-level">
+                        <li><a href="./userManager.html">用户个人信息管理</a></li>
+                        <li><a href="./user.html">用户管理</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span><img src="../img/money.png"> 收 支 管 理</span>
+                    <ul class="tow-level">
+                            <li><a href="./moneyIn.html">收入信息维护</a></li>
+                            <li><a href="./moneyOut.html">支出信息维护</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span><img src="../img/finance.png"> 财 务 管 理</span>
+                    <ul class="tow-level">
+                        <li><a href="./financial_system.html">证券账户管理</a></li>
+                        <li><a href="./stock_list.html">持股管理</a></li>
+                        <li><a href="./securitiesItem.html">证券流水帐管理</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span><a href="./report.html"><img src="../img/report.png"> 报 表 管 理</a></span>
+                </li>
+            </ul>
+        </div>        
+        <div id=right>
+                <nav>
+                <span class="nav-first"><img src="../img/home.png"><a href="./main.html"> 主页</a></span>
+                <span class="nav-second">> <a href="">用户管理</a></span>
+                <span class="nav-third"></span>
+                </nav>
+                <ul class=third-level>
+                    <li class="current" alt="user-list"><a href="javascript:;">新建用户</a></li>
+                    <li class="" alt="modify"><a href="javascript:;">修改用户</a></li>
+                    <li class="" alt="add"><a href="javascript:;">添加用户</a></li>
+                    <li class="fix"></li>
+                </ul>
+                <div id="what">
+                    <div name="user-list">
+                    <br><br>
+                        <form id="form1" action="" method="post">
+                            <input type="text" name="name" id="form1-name" placeholder="按姓名搜索">
+                            <input type="submit" value="搜索" class="submit-btn">
+                        </form>
+                        <table class="table table-striped">
+                             <caption><h3 style="text-align: center;">用户名单</h3></caption>
+                            <thread>
+                                <tr>
+                                    <th>姓名</th>
+                                    <th>密码</th>
+                                    <th>银行帐号</th>
+                                    <th>工资</th>
+                                    <th>家庭称呼</th>
+                                    <th>年龄</th>
+                                    <th>身份证号</th>
+                                     <th>操作</th>
+                                </tr>
+                            </thread>
+                            <tbody >
+                                <tr><td>小明</td><td>123321123</td><td>xxxx-xxxx-xxxx-xxx</td><td>6000</td><td>儿子 </td><td>25</td><td>00000000</td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
+                                <tr><td>大明</td><td>123321123</td></td><td>xxxx-xxxx-xxxx-xxx</td><td>8000</td><td>父亲</td><td>46</td><td>11111111</td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div name="modify">
+                        <form id="form3"  action="" method="get">
+                            <fieldset>
+                            <legend><h4>修改用户信息</h4></legend>
+                            用户姓名:<input type="text" id="form3-name" placeholder="用户姓名"><span style="color: red"> *</span><br><br>
+                            用户密码:<input type="text" id="form3-password" placeholder="密码"><span style="color: red"> *</span><br><br>
+                            银行帐号:<input type="text" id="form3-account" placeholder=" 银行帐号"><span style="color: red"> *</span><br><br>
+                            用户工资:<input type="text" id="form3-wage" placeholder="月薪"><span style="color: red"> *</span><br><br>
+                            家庭称呼:<input type="text" id="form3-call" placeholder="家庭称呼"><span style="color: red"> *</span><br><br>
+                            用户年龄:<input type="text" id="form3-age"  placeholder="年龄"><span style="color: red"> *</span><br><br>
+                            身份证号:<input type="text" id="form3-ID" placeholder="身份证号"><span style="color: red"> *</span><br><br>
+                            <input type="submit" value="提交" class="submit-btn" >
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div name="add">
+                        <form id="form2"  action="" method="get">
+                            <fieldset>
+                            <legend><h4>添加用户</h4></legend>
+                            用户姓名:<input type="text" id="form2-name" placeholder="用户姓名"><span style="color: red"> *</span><br><br>
+                            用户密码:<input type="text" id="form2-password" placeholder="密码"><span style="color: red"> *</span><br><br>
+                            银行帐号:<input type="text" id="form2-account" placeholder=" 银行帐号"><span style="color: red"> *</span><br><br>
+                            用户工资:<input type="text" id="form2-wage" placeholder="月薪"><span style="color: red"> *</span><br><br>
+                            家庭称呼:<input type="text" id="form2-call" placeholder="家庭称呼"><span style="color: red"> *</span><br><br>
+                            用户年龄:<input type="text" id="form2-age"  placeholder="年龄"><span style="color: red"> *</span><br><br>
+                            身份证号:<input type="text" id="form2-ID" placeholder="身份证号"><span style="color: red"> *</span><br><br>
+                            <input type="submit" value="提交" class="submit-btn" >
+                            </fieldset>
+                        </form>
+                    </div>
+
+                </div>
+        </div>  
+    </div>
+    <br><br>
+    <footer>
+        <div>power by LZAHYY</div>
+    </footer>
+    <script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../jedate/jedate.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/user.js"></script>
+    <script type="text/javascript">
+        jeDate({
+            dateCell:"#form1-date",
+            format:"YYYY-MM-DD",
+            isTime:false, 
+            minDate:"1975-00-00"
+        })
+    </script>
+    </body>
+    </html>

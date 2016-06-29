@@ -1,7 +1,7 @@
 function modifyRceord(event){
     $("ul.third-level li[alt='modify']").click();
-    var tags=["#form3-type","#form3-name","#form3-num","#form3-date","#form3-source","#form3-remark"]
-    for(var i=0;i<6;i++){
+    var tags=["#form3-name","#form3-password","#form3-account","#form3-wage","#form3-call","#form3-age","#form3-ID"]
+    for(var i=0;i<7;i++){
     	$(tags[i]).attr("value",$(this).parent().siblings().eq(i).text());
     }
 }

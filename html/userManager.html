@@ -9,17 +9,40 @@
     <link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css"> 
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/money.css">
     <!--[if lte IE 9]>
     <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="../js/selectivizr-master/selectivizr.js"></script>
     <![endif]-->
+    <style>
+        input.pu-input{
+            border:1px solid lightgray;
+            width: 150px;
+            height: 2em;
+            font-size: 1em;
+            background: rgba(255,255,255,0.9);
+            transition: all 0.2s linear;
+        }
+        input.pu-input:focus{
+            border: 1px solid lightseagreen;
+        }
+        input.submit-btn{
+            width: 80px;;
+            height: 2em;
+            border: 1px solid lightgrey;
+            background-color: cadetblue;
+            border-radius: 0.2em;
+            transition: all 0.2s linear;
+        }
+        input.submit-btn:hover{
+            background-color: steelblue;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div id="logo"><img src="../img/logo.png" alt=""></div>
         <div id="system-title">家庭理财系统</div>
-        <div id="sign-out"><img src="../img/sign_out.png"> 注销</div>
+        <div id="sign-out"><a href="login.html"><img src="../img/sign_out.png"> 注销</a></div>
     </header>
     <div id=center>
         <div id="content">
@@ -29,7 +52,7 @@
                     <span><img src="../img/person.png"> 用 户 管 理</span>
                     <ul class="tow-level">
                         <li><a href="./userManager.html">用户个人信息管理</a></li>
-                        <li><a href="./newUser.html">用户管理</a></li>
+                        <li><a href="./user.html">用户管理</a></li>
                     </ul>
                 </li>
                 <li>
@@ -52,7 +75,7 @@
                 </li>
             </ul>
         </div>
-        
+
         <div id=right>
                 <nav>
                 <span class="nav-first"><img src="../img/home.png"><a href="./main.html"> 主页</a></span>
@@ -67,40 +90,60 @@
                 <div id="what">
                      <div name="userInfo_change">
                     <br><br>
-                        
-                    <form action="" method="post">
-                    <div  align="center">
-                        <label class="lab">姓名</label>
-                        <input class="datainp" type="text" name="name" id="name" placeholder="小明"></input>
-                    </div>
 
-                    
+                    <form action="" method="post" >
+                    <table class="table table-triped" width="80%" align="center">
+                    <tbody >
+                        <tr>
+                            <td align="right" width="50%">姓名</td>
+                            <td ><input type="text" name="name" placeholder="小明" class="pu-input"></td>
+                        </tr>
+                    </tbody>
 
-                    <div align="center">
-                        <label class="lab">出生日期</label>
-                        <input class="datainp" type="text" name="birth" id="date_1" placeholder="出生日期">
-                    </div>
+                    <tbody >
+                        <tr>
+                            <td align="right">银行账号</td>
+                            <td><input type="text" name="bankId" placeholder="320226121234555" class="pu-input"></td>
+                        </tr>
+                    </tbody>
 
-                    <div align="center">
-                        <label class="lab">身份证号</label>
-                        <input class="datainp" type="text" name="IdCard" id="IdCard" placeholder="XXX">
-                    </div>
+                    <tbody>
+                        <tr>
+                            <td align="right">工资</td>
+                            <td><input type="text" name="" placeholder="6000" class="pu-input"></td>
+                        </tr>
+                    </tbody>
 
-                    <div align="center">
-                        <label class="lab">email</label>
-                        <input class="datainp" type="text" name="email" id="em" placeholder="XXX@XXX.com">
-                    </div>
+                    <tbody>
+                        <tr>
+                            <td align="right">家庭称呼</td>
+                            <td>
+                                <input type="" name="" placeholder="儿子" class="pu-input">
+                            </td>
+                        </tr>
+                    </tbody>
 
-                    <div align="center">
-                        <label class="lab">性别</label>
-                        <input  type="radio" name="gender" value="female" >男
-                        <input  type="radio" name="gender" value="male" checked="checked" >女
-                    </div>
+                    <tbody>
+                        <tr>
+                            <td align="right">年龄</td>
+                            <td ><input type="number" name="" placeholder="20" class="pu-input"></td>
+                        </tr>
+                    </tbody>
 
-                    <div align="center">
-                         <input type="submit" name="submit" value="提交">
-                    </div>
-                   
+                    <tbody>
+                        <tr>
+                            <td align="right">身份证号</td>
+                            <td><input type="text" name="" placeholder="320882XXXXXXXXXX" class="pu-input"></td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <td colspan="2" align="center"><input type="submit" name="submit" value="提交修改" class="submit-btn"></td>
+                        </tr>
+                    </tbody>
+
+                    </table >
                     </form>
                 </div>
                 </div>
