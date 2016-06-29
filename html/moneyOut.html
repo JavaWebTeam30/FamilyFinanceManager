@@ -78,6 +78,7 @@
                              <caption><h3 style="text-align: center;">收入明细</h3></caption>
                             <thread>
                                 <tr>
+                                    <th>记录编号</th>
                                     <th>支出类型</th>
                                     <th>支出者</th>
                                     <th>支出金额</th>
@@ -88,8 +89,8 @@
                                 </tr>
                             </thread>
                             <tbody >
-                                <tr ><td>税收</td><td>Dad</td><td>500</td><td>2016-06-29 </td><td>缴税</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a><</td></tr>
-                                <tr><td>医疗</td><td>son</td><td>100</td><td>2016-06-31</td><td>看病</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a><</td></tr>
+                                <tr><td>0001</td><td>税收</td><td>Dad</td><td>500</td><td>2016-06-29 </td><td>缴税</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
+                                <tr><td>0002</td><td>医疗</td><td>son</td><td>100</td><td>2016-06-31</td><td>看病</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
                             </tbody>
                         </table>
                         </div>
@@ -99,11 +100,12 @@
                             <fieldset>
                             <legend><h4>修改记录</h4></legend>
                             支出类型:<select name="type" id="form3-type">
-                                                <option value="税收">税收</option>
+                                                <option value="税收" selected>税收</option>
                                                 <option value="衣食住行">衣食住行</option>
                                                 <option value="医疗">医疗</option>
                                                 <option value="其他">其他</option>
                                             </select><span style="color: red"> *</span><br><br>
+                            记录编号:<input type="text" name="ID" id="form3-ID" placeholder="记录编号"></input><span style="color: red"> *</span><br><br>
                             支出人员:<input type="text" name="name" id="form3-name" placeholder="支出人员"></input><span style="color: red"> *</span><br><br>
                             支出金额:<input type="text" name="num" id="form3-num" placeholder="金额"></input><span style="color: red"> *</span><br><br>
                             支出日期:<input class="date" type="text" name="date" id="form3-date" placeholder="支出日期" readonly="readonly"><span style="color: red"> *</span><br><br>

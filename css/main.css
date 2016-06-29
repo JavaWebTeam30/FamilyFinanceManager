@@ -12,7 +12,7 @@ body{
     width: 25%;
     height: 400px;
     float: left;
-    background-color:rgba(0,134,139,0.4); 
+    ackground-color:rgba(0,134,139,0.4);
 }
 #right{
     position: relative;

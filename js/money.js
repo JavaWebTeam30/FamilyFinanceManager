@@ -1,9 +1,12 @@
 function modifyRceord(event){
     $("ul.third-level li[alt='modify']").click();
-    var tags=["#form3-type","#form3-name","#form3-num","#form3-date","#form3-source","#form3-remark"]
-    for(var i=0;i<6;i++){
-    	$(tags[i]).attr("value",$(this).parent().siblings().eq(i).text());
-    }
+    $("#form3-type").val($(this).parent().siblings().eq(1).text());
+    $("#form3-ID").attr("value",$(this).parent().siblings().eq(0).text());
+    $("#form3-name").attr("value",$(this).parent().siblings().eq(2).text());
+    $("#form3-num").attr("value",$(this).parent().siblings().eq(3).text());
+    $("#form3-date").attr("value",$(this).parent().siblings().eq(4).text());
+    $("#form3-source").attr("value",$(this).parent().siblings().eq(5).text());
+    $("#form3-remark").attr("value",$(this).parent().siblings().eq(6).text());
 }
 $(document).ready(function(){
     $("a.modify").click(modifyRceord);
