@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="renderer" content="webkit">
-    <title>支出信息维护</title>
+    <title>Delete User</title>
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css"> 
     <link rel="stylesheet" type="text/css" href="../css/common.css">
@@ -23,7 +23,7 @@
     </header>
     <div id=center>
         <div id="content">
-         <div id="left">
+       <div id="left">
             <ul class="one-level">
                 <li>
                     <span><img src="../img/person.png"> 用 户 管 理</span>
@@ -56,59 +56,27 @@
         <div id=right>
                 <nav>
                 <span class="nav-first"><img src="../img/home.png"><a href="./main.html"> 主页</a></span>
-                <span class="nav-second">> <a href="">支出信息维护</a></span>
+                <span class="nav-second">> <a href="">用户管理</a></span>
                 <span class="nav-third"></span>
                 </nav>
                 <ul class=third-level>
-                    <li class="current" alt="outCome-list"><a href="javascript:;">支出列表</a></li>
-                    <li class="" alt="modify"><a href="javascript:;">修改支出条目</a></li>
+                    <li class=""><a href="./newUser.html">新建用户</a></li>
+                    <li class=""><a href="./alterUser.html">修改用户信息</a></li>
+                    <li class=""><a href="./queryUser.html">查询用户信息</a></li>
+                    <li class="current" alt="deleteUser"><a href="./deleteUser.html">删除用户</a></li>
                     <li class="fix"></li>
                 </ul>
                 <div id="what">
-                    <div name="outCome-list">
-                        <br><br>
-                        <form id="form1" action="" method="get">
-                            <input type="text" name="date" id="form1-date" placeholder="按日期搜索" readonly="readonly">
-                            <input type="submit" value="搜索" class="search-btn">
-                        </form>
-                        <table class="table table-striped">                          
-                             <caption><h3 style="text-align: center;">支出明细<h3></caption>
-                            <thread>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>名称</th>
-                                    <th>金额</th>
-                                    <th>时间</th>
-                                    <th>操作</th>
-                                </tr>
-                            </thread>
-                            <tbody >
-                                <tr ><td>0001</td><td>买菜</td><td>50</td><td>2016-06-29 </td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
-                                <tr><td>0002</td><td>买书</td><td>120</td><td>2016-06-31</td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
-                            </tbody>
-                        </table>
-                        <form id=form2 action="" method="get">
-                            <fieldset>
-                            <legend><h4>添加记录</h4></legend>
-                            <input type="text" name="name" id="form2-name" placeholder="支出去向"></input>
-                            <input type="text" name="num" id="form2-num" placeholder="金额"></input>
-                            <input type="submit" value="提交" class="search-btn" ></input>
-                            </fieldset>
-                        </form>
-                    </div>
-                     <div name="modify">
-                        <form id="form3"     action="" method="get">
-                            <fieldset>
-                            <legend><h4>修改记录</h4></legend>
-                            编号:<input type="text" name="ID" id="form3-ID" placeholder="记录ID"></input><br><br>
-                            名称:<input type="text" name="name" id="form3-name" placeholder="收入来源"></input><br><br>
-                            金额:<input type="text" name="num" id="form3-num" placeholder="金额"></input><br><br>
-                            <input type="submit" value="提交" class="search-btn" ></input>
-                            </fieldset>
-                        </form>
-                    </div>
-        </div>
-        </div>
+                    <br><br>
+                        <div name="deleteUser">
+                            <form action="#" id="delete-form" method="post">
+                                <input type="text" id="username" placeholder="请输入用户名" tabindex="2"></input><br>
+                                <input type="password" id="password" placeholder="请输入密码" tabindex="2"></input><br>
+                                <input type="submit" value="删除" id="submit"></input>
+                            </form>
+                        </div> 
+                </div>
+        </div>  
     </div>
     <br><br>
     <footer>
@@ -118,7 +86,6 @@
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../jedate/jedate.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript" src="../js/money.js"></script>
     <script type="text/javascript">
         jeDate({
             dateCell:"#form1-date",

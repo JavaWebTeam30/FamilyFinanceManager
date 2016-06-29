@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>家庭理财系统</title>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!--[if lte IE 9]>
+    <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="../js/selectivizr-master/selectivizr.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <div id="logo"><img src="../img/logo.png" alt=""></div>
+    <div id="system-title">家庭理财系统</div>
+    <div id="sign-out"><img src="../img/sign_out.png"> 注销</div>
+</header>
+<div id=center>
+    <div id="content">
+         <div id="left">
+            <ul class="one-level">
+                <li>
+                    <span><img src="../img/person.png"> 用 户 管 理</span>
+                    <ul class="tow-level">
+                        <li><a href="./userManager.html">用户个人信息管理</a></li>
+                        <li><a href="./newUser.html">用户管理</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span><img src="../img/money.png"> 收 支 管 理</span>
+                    <ul class="tow-level">
+                            <li><a href="./moneyIn.html">收入信息维护</a></li>
+                            <li><a href="./moneyOut.html">支出信息维护</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span><img src="../img/finance.png"> 财 务 管 理</span>
+                    <ul class="tow-level">
+                        <li><a href="./financial_system.html">证券账户管理</a></li>
+                        <li><a href="./stock_list.html">持股管理</a></li>
+                        <li><a href="./securitiesItem.html">证券流水帐管理</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span><a href="./report.html"><img src="../img/report.png"> 报 表 管 理</a></span>
+                </li>
+            </ul>
+        </div>
+        
+        <div id=right>
+            <nav>
+                <span class="nav-first"><img src="../img/home.png"><a href=""> 主页</a></span>
+                <span class="nav-second"><a href="">> 证券账户管理</a></span>
+                <span class="nav-third"></span>
+            </nav>
+            <ul class=third-level>
+                <li class=""><a href="financial_system.html">证券帐户信息列表</a></li>
+                <li class=""><a href="financial_addaccount.html">新建证券帐户信息</a></li>
+                <li class="current" alt="accountinfo"><a href="financial_system.html">证券帐户信息详情</a></li>
+                <li class="fix"></li>
+            </ul>
+            <div id="what">
+                <div name="accountinfo">
+                    <table class="table table-striped">
+                        <caption><h3 style="text-align: center;">账户详情</h3></caption>
+                        <thread>
+                            <tr>
+                                <th>账户名称</th>
+                                <th>账户号码</th>
+                                <th>账户余额</th>
+                                <th>操作</th>
+                            </tr>
+                        </thread>
+                        <tbody >
+                        <tr ><td>上海A股</td><td>12312</td><td>11111.1 </td><td><a href="">修改</a></td></tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped">
+                        <caption><h3 style="text-align: center;">账户持股详情</h3></caption>
+                        <thread>
+                            <tr>
+                                <th>股票名称</th>
+                                <th>持有股份</th>
+                                <th>股价</th>
+                                <th>总计</th>
+                                <th>操作</th>
+                            </tr>
+                        </thread>
+                        <tbody >
+                        <tr ><td>30科技</td><td>1000</td><td>111.1 </td><td>111100</td><td><a href="">查看股票</a></td></tr>
+                        <tr ><td>pg游戏</td><td>100</td><td>11.1 </td><td>1110</td><td><a href="">查看股票</a></td></tr>
+                        </tbody>
+                    </table>
+                    <div align="center">
+                        <button type="submit" class="btn btn-success" href="financial_system.html">返回账户列表</button>
+                        <button type="submit" class="btn bg-warning" href="financial_system.html">确认账户修改</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<br><br>
+<footer>
+    <div>power by LZAHYY</div>
+</footer>
+<script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
