@@ -67,7 +67,7 @@ nav{
     height:30px;
     line-height: 30px;
     font-size: 1.2em;
-    color: white;
+    color: red;
 }
 nav span.nav-first img{
     width: 35px;
@@ -112,7 +112,6 @@ ul.third-level li a{
 ul.third-level li.current a{
     color: steelblue;
 }
-
 
 
 
