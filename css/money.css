@@ -25,7 +25,8 @@ input.search-btn{
 }
 
 #form2-type,#form3-type{
-    width: 60px;
+    width: 150px;
+    height: 2em;
     border: 1px solid lightgray;
 }
 

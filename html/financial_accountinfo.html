@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/financial.css">
     <!--[if lte IE 9]>
     <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="../js/selectivizr-master/selectivizr.js"></script>
@@ -50,7 +51,7 @@
                 </li>
             </ul>
         </div>
-        
+
         <div id=right>
             <nav>
                 <span class="nav-first"><img src="../img/home.png"><a href=""> 主页</a></span>
@@ -76,7 +77,7 @@
                             </tr>
                         </thread>
                         <tbody >
-                        <tr ><td>上海A股</td><td>12312</td><td>11111.1 </td><td><a href="">修改</a></td></tr>
+                        <tr ><td>上海A股</td><td>12312</td><td>11111.1 </td><td><a href="./financial_changeaccount.html">修改</a></td></tr>
                         </tbody>
                     </table>
                     <table class="table table-striped">
@@ -84,20 +85,22 @@
                         <thread>
                             <tr>
                                 <th>股票名称</th>
+                                <th>股票代号</th>
                                 <th>持有股份</th>
                                 <th>股价</th>
-                                <th>总计</th>
                                 <th>操作</th>
                             </tr>
                         </thread>
                         <tbody >
-                        <tr ><td>30科技</td><td>1000</td><td>111.1 </td><td>111100</td><td><a href="">查看股票</a></td></tr>
-                        <tr ><td>pg游戏</td><td>100</td><td>11.1 </td><td>1110</td><td><a href="">查看股票</a></td></tr>
+                        <tr ><td>pg游戏</td><td>32431</td><td>100</td><td>11.1 </td><td><a href="stock_info.html">查看股票</a></td></tr>
                         </tbody>
                     </table>
                     <div align="center">
-                        <button type="submit" class="btn btn-success" href="financial_system.html">返回账户列表</button>
-                        <button type="submit" class="btn bg-warning" href="financial_system.html">确认账户修改</button>
+                        <label>总计</label>
+                        <output aria-autocomplete="inline">投资总值:112210.0</output>
+                    </div><br>
+                    <div align="center">
+                        <a href="financial_system.html">返回账户列表</a>
                     </div>
                 </div>
             </div>

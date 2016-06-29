@@ -6,9 +6,11 @@
     <meta name="renderer" content="webkit">
     <title>收入信息维护</title>
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css"> 
+    <link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/money.css">
+
     <!--[if lte IE 9]>
     <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="../js/selectivizr-master/selectivizr.js"></script>
@@ -18,11 +20,11 @@
     <header>
         <div id="logo"><img src="../img/logo.png" alt=""></div>
         <div id="system-title">家庭理财系统</div>
-        <div id="sign-out"><a href="login.html"><img src="../img/sign_out.png"> 注销</a></div>
+        <div id="sign-out"><img src="../img/sign_out.png"> 注销</div>
     </header>
     <div id="center">
     <div id="content">
-     <div id="left">
+        <div id="left">
             <ul class="one-level">
                 <li>
                     <span><img src="../img/person.png"> 用 户 管 理</span>
@@ -51,25 +53,27 @@
                 </li>
             </ul>
         </div>
-        
         <div id=right>
-                <nav>
+            <nav>
                 <span class="nav-first"><img src="../img/home.png"><a href="./main.html"> 主页</a></span>
                 <span class="nav-second">> <a href="">证券流水帐管理</a></span>
                 <span class="nav-third"></span>
-                </nav>
+            </nav>
                 <ul class=third-level>
                     <li class="current" alt="tradelists-manager"><a href="javascript:;">证券流水账查询</a></li>
-                    <li class="" alt="updateaction"><a href="javascript:;">新建修改证券流水账</a></li>
+                    <li class="" alt="updateaction"><a href="javascript:;">修改证券流水账</a></li>
+                    <li class="" alt="createaction"><a href="javascript:;">新建证券流水账</a></li>
+                    <li class="" alt="detailsaction"><a href="javascript:;">证券流水账详情</a></li>
                     <li class="fix"></li>
                 </ul>
                 <div id="what">
                     <div name="tradelists-manager">
                         <caption><h3 style="text-align: center;">证券流水账信息查询</h3></caption>
                         <table align="center">
+                            <form>
                             <tr>
                                 <td>证券账户</td>
-                                <td><input type="text" name="secuser" placeholder="证券账户名"></td>
+                                <td><input type="text" id="secuser" placeholder="证券账户名"></td>
                             </tr>
                             <tr>
                                 <td>开始时间</td>
@@ -82,22 +86,21 @@
                             <tr>
                                 <td>交易类型</td>
                                 <td>
-                                    <form>
-                                        <select name="tradetype">
-                                            <option value="all">所有</option>
-                                            <option value="sell">卖出</option>
-                                            <option value="buy">购入</option>
-                                            </select>
-                                    </form>
+                                    <select id="tradetype">
+                                        <option value="all">所有</option>
+                                        <option value="sell">卖出</option>
+                                        <option value="buy">购入</option>
+                                    </select>
                                 </td>
                             </tr>
                             <tr>
-                                <td><input type="button" name="search" value="查询"></td>
-                                <td><input type="button" name="reset" value="重置"></td>
+                                <td><button type="button" id="search" onclick="securities_search()">查询</button></td>
+                                <td><button type="button" id="reset" onclick="securities_reset()">重置</button></td>
                             </tr>
+                            </form>
                         </table>
                         <table align="center" class="table table-striped">
-                            <caption><h3 style="text-align: center;">收入明细<h3></caption>
+                            <caption><h3 style="text-align: center;">交易明细<h3></caption>
                             <thread>
                                 <tr>
                                     <th>交易单号</th>
@@ -114,33 +117,25 @@
                                 <td>2016-07-01 10:24</td>
                                 <td>10000</td>
                                 <td>
-                                    <input type="button" name="modify" value="修改">
-                                    <input type="button" name="delete" value="删除">
-                                    <input type="button" name="details" value="详情">
+                                    <button type="button" id="sec_modify">修改</button>
+                                    <button type="button" id="sec_delete" onclick="securities_delete()">删除</button>
+                                    <button type="button" id="sec_details">详情</button>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>201607041556494854</td>
-                                <td>购入</td>
-                                <td>2016-07-04 15:56</td>
-                                <td>8000</td>
-                                <td>
-                                    <input type="button" name="modify" value="修改">
-                                    <input type="button" name="delete" value="删除">
-                                    <input type="button" name="details" value="详情">
-                                </td>
-                            </tr>
+                            <tr id="resultOfSearch"></tr>
                             </tbody>
                         </table>
+
+                        <br><br>
+                        <button type="button" id="sec_create" >新建</button>
                     </div>
                     <div name="updateaction">
-                        <caption><h3 style="text-align: center;">新建、修改证券流水账</h3></caption>
+                        <caption><h3 style="text-align: center;">修改证券流水账</h3></caption>
                         <table align="center">
                             <tr>
                                 <td>交易单号</td>
                                 <td>
                                     201607021502987654
-                                    <input type="button" name="create" value="新建">
                                 </td>
                             </tr>
                             <tr>
@@ -168,7 +163,79 @@
                             <tr>
                                 <td>  </td>
                                 <td>
-                                    <input type="submit" name="update" value="确认提交">
+                                    <button type="button" id="modify_submit">确认提交</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div name="createaction">
+                        <caption><h3 style="text-align: center;">新建证券流水账</h3></caption>
+                        <table align="center">
+                            <tr>
+                                <td>交易单号</td>
+                                <td>
+                                    201607021502987654
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>交易时间</td>
+                                <td><input class="datainp" id="tradetime" type="text" placeholder="截止时间" readonly></td>
+                            </tr>
+                            <tr>
+                                <td>交易类型</td>
+                                <td>
+                                    <form>
+                                        <input type="radio" name="selecttype" value="sell"> 卖出
+                                        <input type="radio" name="selecttype" value="buy"> 购入
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>交易明细</td>
+                                <td><textarea name="tradedetails" cols="70" rows="5" placeholder="例:单价￥0.8出售5000股460002">
+                                </textarea></td>
+                            </tr>
+                            <tr>
+                                <td>总成交额</td>
+                                <td><input type="text" name="totalmoney" placeholder="￥"></td>
+                            </tr>
+                            <tr>
+                                <td>  </td>
+                                <td>
+                                    <button type="button" id="create_submit">确认提交</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div name="detailsaction">
+                        <caption><h3 style="text-align: center;">新建、修改证券流水账</h3></caption>
+                        <table align="center">
+                            <tr>
+                                <td>交易单号</td>
+                                <td>
+                                    201607021502987654
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>交易时间</td>
+                                <td>2014-07-02 16:20</td>
+                            </tr>
+                            <tr>
+                                <td>交易类型</td>
+                                <td> - 卖出 - </td>
+                            </tr>
+                            <tr>
+                                <td>交易明细</td>
+                                <td>单价￥0.8出售5000股460002"></td>
+                            </tr>
+                            <tr>
+                                <td>总成交额</td>
+                                <td>￥4000</td>
+                            </tr>
+                            <tr>
+                                <td>  </td>
+                                <td>
+                                    <button type="button" id="details_back">返回</button>
                                 </td>
                             </tr>
                         </table>
@@ -188,31 +255,33 @@
     <script type="text/javascript" src="../jedate/jedate.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
     <script type="text/javascript" src="../js/money.js"></script>
+    <script type="text/javascript" src="../js/securitiesItem.js"></script>
     <script type="text/javascript">
-                                    jeDate({
-                                        dateCell:"#startline",
-                                        format:"YYYY-MM-DD hh:mm",
-                                        //isinitVal:true,
-                                        isTime:true,
-                                        minDate:"2016-01-01 00:00",
-                                        maxDate:"2049-12-31 00:00"
-                                    });
-                                    jeDate({
-                                        dateCell:"#endline",
-                                        format:"YYYY-MM-DD hh:mm",
-                                        //isinitVal:true,
-                                        isTime:true,
-                                        minDate:"2016-01-01 00:00",
-                                        maxDate:"2049-12-31 00:00"
-                                    });
-                                      jeDate({
-                                        dateCell:"#tradetime",
-                                        format:"YYYY-MM-DD hh:mm",
-                                        //isinitVal:true,
-                                        isTime:true,
-                                        minDate:"2016-01-01 00:00",
-                                        maxDate:"2049-12-31 00:00"
-                                    })
+        jeDate({
+            dateCell:"#startline",
+            format:"YYYY-MM-DD hh:mm",
+            //isinitVal:true,
+            isTime:true,
+            minDate:"2016-01-01 00:00",
+            maxDate:"2049-12-31 00:00"
+        });
+        jeDate({
+            dateCell:"#endline",
+            format:"YYYY-MM-DD hh:mm",
+            //isinitVal:true,
+            // isTime:true,
+            minDate:"2016-01-01 00:00",
+            maxDate:"2049-12-31 00:00"
+        });
+        jeDate({
+            dateCell:"#tradetime",
+            format:"YYYY-MM-DD hh:mm",
+            //isinitVal:true,
+            isTime:true,
+            minDate:"2016-01-01 00:00",
+            maxDate:"2049-12-31 00:00"
+        })
     </script>
+
     </body>
     </html>

@@ -25,6 +25,7 @@
             background-color: cadetblue;
             border-radius: 0.2em;
             transition: all 0.2s linear;
+            color: white;
         }
         input.submit-btn:hover{
             background-color: steelblue;
@@ -85,7 +86,8 @@
                             <h2 align="center">报表管理</h2>
                         </div>
                         <br>
-                        <div id="reportForm-chooseDate" align="center">
+                        <div align="center">
+                        <form id="reportForm-chooseDate" >
                             <label class="lab" >查询月份</label>
                             <input class="datainp" id="indate_1" type="text" value="" placeholder="选择时间" readonly >
 
@@ -94,7 +96,8 @@
                             <input  type="radio" name="query_search" value="query_out" >支出查询
                             <input  type="radio" name="query_search" value="query_inout" checked="checked"> 收支查询
                             <input class="submit-btn" type="submit" value="查询" >
-                        </div>
+                        </form>
+                            </div>
                         <br>
                         <div id="reportForm-table">
                             <table class="table table-striped">

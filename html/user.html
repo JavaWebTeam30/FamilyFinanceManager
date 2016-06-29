@@ -19,7 +19,7 @@
     <header>
         <div id="logo"><img src="../img/logo.png" alt=""></div>
         <div id="system-title">家庭理财系统</div>
-        <div id="sign-out"><img src="../img/sign_out.png"> 注销</div>
+        <div id="sign-out"><a href="login.html"><img src="../img/sign_out.png"> 注销</a></div>
     </header>
     <div id=center>
         <div id="content">
@@ -67,10 +67,12 @@
                 <div id="what">
                     <div name="user-list">
                     <br><br>
+                        <div align="center">
                         <form id="form1" action="" method="post">
                             <input type="text" name="name" id="form1-name" placeholder="按姓名搜索">
                             <input type="submit" value="搜索" class="submit-btn">
                         </form>
+                            </div>
                         <table class="table table-striped">
                              <caption><h3 style="text-align: center;">用户名单</h3></caption>
                             <thread>
@@ -92,9 +94,10 @@
                         </table>
                     </div>
                     <div name="modify">
+                        <div align="center">
                         <form id="form3"  action="" method="get">
                             <fieldset>
-                            <legend><h4>修改用户信息</h4></legend>
+                            <legend><h4>修改用户</h4></legend>
                             用户姓名:<input type="text" id="form3-name" placeholder="用户姓名"><span style="color: red"> *</span><br><br>
                             用户密码:<input type="text" id="form3-password" placeholder="密码"><span style="color: red"> *</span><br><br>
                             银行帐号:<input type="text" id="form3-account" placeholder=" 银行帐号"><span style="color: red"> *</span><br><br>
@@ -105,8 +108,10 @@
                             <input type="submit" value="提交" class="submit-btn" >
                             </fieldset>
                         </form>
+                            </div>
                     </div>
                     <div name="add">
+                        <div align="center">
                         <form id="form2"  action="" method="get">
                             <fieldset>
                             <legend><h4>添加用户</h4></legend>
@@ -120,6 +125,7 @@
                             <input type="submit" value="提交" class="submit-btn" >
                             </fieldset>
                         </form>
+                            </div>
                     </div>
 
                 </div>
@@ -140,6 +146,24 @@
             format:"YYYY-MM-DD",
             isTime:false, 
             minDate:"1975-00-00"
+        })
+        $("#manager_form").submit(function () {
+            var inputList=$("#manager_form input")
+            for(var i=0;i<inputList.length;i++){
+                if(!inputList.eq(i).val()){
+                    alert("有必填项为空");
+                    return false;
+                }
+            }
+        })
+        $("form").submit(function () {
+            var inputList=$(this).find("input")
+            for(var i=0;i<inputList.length;i++){
+                if(!inputList.eq(i).val()){
+                    alert("有必填项为空");
+                    return false;
+                }
+            }
         })
     </script>
     </body>

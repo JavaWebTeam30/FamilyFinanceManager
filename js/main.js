@@ -22,4 +22,13 @@ $(document).ready(function(){
     $("#what >div[name!='"+$("ul.third-level li.current").attr("alt")+"']").hide();
     $("ul.third-level li").click(changoTab);
     $("ul.third-level li[class='fix']").unbind("click");
+    $("form").submit(function () {
+            var inputList=$(this).find("input")
+            for(var i=0;i<inputList.length;i++){
+                if(!inputList.eq(i).val()){
+                    alert("有必填项为空");
+                    return false;
+                }
+            }
+        })
 });

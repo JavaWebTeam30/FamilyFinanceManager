@@ -119,5 +119,12 @@ footer div{
     font-size: 1.2em;
     text-align: center;
 }
+#sign-out a{
+    color: white;
+    transition: all 0.2s linear;
+}
+#sign-out a:hover{
+    color:lightcyan;
+}
 
 

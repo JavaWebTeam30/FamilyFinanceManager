@@ -6,8 +6,10 @@
     <meta name="renderer" content="webkit">
     <title>家庭理财系统</title>
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/money.css">
     <!--[if lte IE 9]>
     <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="../js/selectivizr-master/selectivizr.js"></script>
@@ -21,7 +23,7 @@
 </header>
 <div id=center>
     <div id="content">
-         <div id="left">
+        <div id="left">
             <ul class="one-level">
                 <li>
                     <span><img src="../img/person.png"> 用 户 管 理</span>
@@ -50,7 +52,7 @@
                 </li>
             </ul>
         </div>
-        
+
         <div id=right>
             <nav>
                 <span class="nav-first"><img src="../img/home.png"><a href=""> 主页</a></span>
@@ -58,36 +60,26 @@
                 <span class="nav-third"></span>
             </nav>
             <ul class=third-level>
-                <li class="current" alt="stock_list"><a href="stock_list.html">持有股票列表</a></li>
-                <li class=""><a href="stock_add.html">添加股票</a></li>
+                <li class=""><a href="stock_list.html">持有股票列表</a></li>
+                <li class=""><a href="stock_add.html">新建股票信息</a></li>
                 <li class=""><a href="stock_holdAdd.html">添加持股</a></li>
+                <li class="current" alt="stock_holdChange"><a href="stock_holdChange.html">修改持股信息</a></li>
                 <li class="fix"></li>
             </ul>
             <div id="what">
-                <div name="stock_list">
-                    <p class="bg-info">点击股票名称即可查看与修改详细信息</p>
-                    <form class="form-inline" action="financial_system.html" name="finance_form" method="post" enctype="multipart/form-data">
-                        <table class="table table-condensed">
-                            <caption><h3 style="text-align: center;">账户列表</h3></caption>
-                            <thread>
-                                <tr>
-                                    <th>股票名称</th>
-                                    <th>代号</th>
-                                    <th>每股单价</th>
-                                    <th>持股总数</th>
-                                    <th>总价</th>
-                                </tr>
-                            </thread>
-
-                            <tr class="bg-info">
-                                <td><a href="stock_info.html">pg游戏</a></td>
-                                <td><output   type="text" name="use">23424</output></td>
-                                <td><output   type="text" name="price">1.11</output></td>
-                                <td><output   type="text" name="total">1100</output></td>
-                                <td><output   type="text" name="totalPrice">1110</output></td>
-                            </tr>
-                        </table>
-                    </form>
+                <div name="stock_holdChange">
+                 <br>
+                 <div style="width: 30%;margin: auto">
+                <form id="form2" method="post" action="./stock_info.html">
+                    <fieldset>
+                        <legend>持股信息修改</legend>
+                        股票名称:<input type="text" readonly="readonly" value="pg游戏"><span style="color: red"> *</span><br><br>
+                        持有用户:<input type="text" placeholder="持有用户" value="son"><span style="color: red"> *</span><br><br>
+                        持有股份:<input type="text" placeholder="持有股份" value="5000"><span style="color: red"> *</span><br><br>
+                        <input type="submit" value="提交" class="submit-btn">
+                    </fieldset>
+                </form>
+                </div>
                 </div>
             </div>
         </div>

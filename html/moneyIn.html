@@ -68,10 +68,12 @@
                 <div id="what">
                     <div name="income-list">
                         <br><br>
+                        <div align="center">
                         <form id="form1" action="" method="get">
                             <input class="date" type="text" name="date" id="form1-date" placeholder="按日期搜索" readonly="readonly">
                             <input type="submit" value="搜索" class="submit-btn">
                         </form>
+                            </div>
                         <table class="table table-striped">                          
                              <caption><h3 style="text-align: center;">收入明细</h3></caption>
                             <thread>
@@ -92,6 +94,7 @@
                         </table>
                         </div>
                     <div name="modify">
+                        <div align="center">
                         <form id="form3"  action="" method="get">
                             <fieldset>
                             <legend><h4>修改记录</h4></legend>
@@ -100,7 +103,7 @@
                                                 <option value="股票">股票</option>
                                                 <option value="分红">分红</option>
                                                 <option value="奖金">奖金</option>
-                                            </select><br><br>
+                                            </select><span style="color: red"> *</span><br><br>
                             收入人员:<input type="text" name="name" id="form3-name" placeholder=" 收入人员"></input><span style="color: red"> *</span><br><br>
                             收入金额:<input type="text" name="num" id="form3-num" placeholder="金额"></input><span style="color: red"> *</span><br><br>
                             收入日期:<input class="date" type="text" name="date" id="form3-date" placeholder="收入日期" readonly="readonly"><span style="color: red"> *</span><br><br>
@@ -109,8 +112,10 @@
                             <input type="submit" value="提交" class="submit-btn" ></input>
                             </fieldset>
                         </form>
+                            </div>
                     </div>
                     <div name="add">
+                        <div align="center">
                     <form id="form2" action="" method="post">
                         <fieldset>
                             <legend><h4>添加记录</h4></legend>
@@ -119,7 +124,7 @@
                                                 <option value="股票">股票</option>
                                                 <option value="分红">分红</option>
                                                 <option value="奖金">奖金</option>
-                                            </select><br><br>
+                                            </select><span style="color: red"> *</span><br><br>
                             收入人员:<input type="text" name="name" id="form2-name"  placeholder=" 收入人员"></input><span style="color: red"> *</span><br><br>
                             收入金额:<input type="text" name="num" id="form2-num" placeholder="金额"></input><span style="color: red"> *</span><br><br>
                             收入日期:<input class="date" type="text" name="date" id="form2-date" placeholder="收入日期" readonly="readonly"><span style="color: red"> *</span><br><br>
@@ -128,6 +133,7 @@
                             <input type="submit" value="提交" class="submit-btn" ></input>
                             </fieldset>
                         </form>
+                            </div>
                     </div>
                     </div>    
                     </div>

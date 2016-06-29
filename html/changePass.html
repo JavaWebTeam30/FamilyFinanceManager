@@ -9,34 +9,11 @@
     <link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css"> 
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/user.css">
     <!--[if lte IE 9]>
     <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="../js/selectivizr-master/selectivizr.js"></script>
     <![endif]-->
-    <style>
-        input.pu-input{
-            border:1px solid lightgray;
-            width: 150px;
-            height: 2em;
-            font-size: 1em;
-            background: rgba(255,255,255,0.9);
-            transition: all 0.2s linear;
-        }
-        input.pu-input:focus{
-            border: 1px solid lightseagreen;
-        }
-        input.submit-btn{
-            width: 80px;;
-            height: 2em;
-            border: 1px solid lightgrey;
-            background-color: cadetblue;
-            border-radius: 0.2em;
-            transition: all 0.2s linear;
-        }
-        input.submit-btn:hover{
-            background-color: steelblue;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -91,12 +68,10 @@
                     <br><br>               
                     <form action="" method="post" id="form-change-pass">
                         <div align="center">
-                            <label class="lab">新的密码:</label>
-                            <input type="password" name="" class="pu-input">
+                            新的密码:<input type="password" name="" ><span style="color: red;"> *</span><br><br>
                         </div>
                         <div align="center">
-                            <label class="lab">确认密码:</label>
-                            <input type="password" name="" class="pu-input">
+                            确认密码:<input type="password" name="" ><span style="color: red;"> *</span><br><br>
                         </div>
                         <div align="center">
                             <input type="submit" name="submit" value="修改密码" class="submit-btn">

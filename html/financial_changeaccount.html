@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -8,12 +8,12 @@
     <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/financial.css">
     <!--[if lte IE 9]>
     <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="../js/selectivizr-master/selectivizr.js"></script>
     <![endif]-->
 </head>
-<body>
 <header>
     <div id="logo"><img src="../img/logo.png" alt=""></div>
     <div id="system-title">家庭理财系统</div>
@@ -50,63 +50,57 @@
                 </li>
             </ul>
         </div>
-        
+
         <div id=right>
             <nav>
-                <span class="nav-first"><img src="../img/home.png"><a href=""> 主页</a></span>
-                <span class="nav-second"><a href="">> 持股管理</a></span>
+                <span class="nav-first"><img src="../img/home.png"><a href="main.html"> 主页</a></span>
+                <span class="nav-second"><a href="">> 证券账户管理</a></span>
                 <span class="nav-third"></span>
             </nav>
             <ul class=third-level>
-                <li class="current" alt="stock_list"><a href="stock_list.html">持有股票列表</a></li>
-                <li class=""><a href="stock_add.html">添加股票</a></li>
-                <li class=""><a href="stock_holdAdd.html">添加持股</a></li>
+                <li class=""><a href="financial_system.html">证券帐户信息列表</a></li>
+                <li class=""><a href="financial_addaccount.html">新建证券帐户信息</a></li>
+                <li class="current" alt="financial_changeaccount"><a href="financial_changeaccount.html">修改证券账户信息</a></li>
                 <li class="fix"></li>
             </ul>
-            <div id="what">
-                <div name="stock_list">
-                    <p class="bg-info">点击股票名称即可查看与修改详细信息</p>
-                    <form class="form-inline" action="financial_system.html" name="finance_form" method="post" enctype="multipart/form-data">
-                        <table class="table table-condensed">
-                            <caption><h3 style="text-align: center;">账户列表</h3></caption>
-                            <thread>
-                                <tr>
-                                    <th>股票名称</th>
-                                    <th>代号</th>
-                                    <th>每股单价</th>
-                                    <th>持股总数</th>
-                                    <th>总价</th>
-                                </tr>
-                            </thread>
+<div id="what">
+    <div name="financial_changeaccount">
+            <caption><h3 style="text-align: center;">修改证券账户</h3></caption><br>
+            <form class="form-group" action="./financial_accountinfo.html" name="finance_addform" method="post" enctype="multipart/form-data">
+                <div  align="center">
+                    <label>证券账户:</label>
+                    <select>
+                        <option value="SHA">上海A股</option>
+                        <option value="SHB">上海B股</option>
+                        <option value="SZA">深圳A股</option>
+                        <option value="SZB">深圳B股</option>
+                    </select><span style="color: red"> *</span><br><br>
+                    </div>
 
-                            <tr class="bg-info">
-                                <td><a href="stock_info.html">pg游戏</a></td>
-                                <td><output   type="text" name="use">23424</output></td>
-                                <td><output   type="text" name="price">1.11</output></td>
-                                <td><output   type="text" name="total">1100</output></td>
-                                <td><output   type="text" name="totalPrice">1110</output></td>
-                            </tr>
-                        </table>
-                    </form>
+                <div align="center">
+                    <label for="financialAccount"> 账户号码:</label>
+                    <input type="text"  id="financialAccount" value="1234"><span style="color: red"> *</span><br><br>
                 </div>
-            </div>
+
+                <div class="form-group" align="center">
+                    <label for="financialAccountMoney"> 账户余额:</label>
+                    <input type="text"  id="financialAccountMoney" value="10000"><span style="color: red"> *</span><br><br>
+                </div>
+                <div align="center">
+                    <input type="submit" class="submit-btn" value="提交修改">
+                </div>
+            </form>
+        </div>
+        </div>
         </div>
     </div>
-    <br><br>
-    <footer>
-        <div>power by LZAHYY</div>
-    </footer>
-    <script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
-    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../jedate/jedate.js"></script>
-    <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript">
-        jeDate({
-            dateCell:"#form1-date",
-            format:"YYYY-MM-DD",
-            isTime:false,
-            minDate:"1975-00-00"
-        })
-    </script>
+</div>
+<br><br>
+<footer>
+    <div>power by LZAHYY</div>
+</footer>
+<script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/main.js"></script>
 </body>
 </html>

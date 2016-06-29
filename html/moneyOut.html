@@ -68,12 +68,14 @@
                 <div id="what">
                     <div name="outCome-list">
                         <br><br>
+                        <div align="center">
                         <form id="form1" action="" method="get">
                             <input class="date" type="text" name="date" id="form1-date" placeholder="按日期搜索" readonly="readonly">
                             <input type="submit" value="搜索" class="submit-btn">
                         </form>
+                            </div>
                         <table class="table table-striped">                          
-                             <caption><h3 style="text-align: center;">收入明细<h3></caption>
+                             <caption><h3 style="text-align: center;">收入明细</h3></caption>
                             <thread>
                                 <tr>
                                     <th>支出类型</th>
@@ -92,6 +94,7 @@
                         </table>
                         </div>
                     <div name="modify">
+                        <div align="center">
                         <form id="form3"  action="" method="post">
                             <fieldset>
                             <legend><h4>修改记录</h4></legend>
@@ -100,8 +103,8 @@
                                                 <option value="衣食住行">衣食住行</option>
                                                 <option value="医疗">医疗</option>
                                                 <option value="其他">其他</option>
-                                            </select><br><br>
-                            支出人员:<input type="text" name="name" id="form3-name" placeholder=" 支出人员"></input><span style="color: red"> *</span><br><br>
+                                            </select><span style="color: red"> *</span><br><br>
+                            支出人员:<input type="text" name="name" id="form3-name" placeholder="支出人员"></input><span style="color: red"> *</span><br><br>
                             支出金额:<input type="text" name="num" id="form3-num" placeholder="金额"></input><span style="color: red"> *</span><br><br>
                             支出日期:<input class="date" type="text" name="date" id="form3-date" placeholder="支出日期" readonly="readonly"><span style="color: red"> *</span><br><br>
                             支出用途:<input type="text" name="source" id="form3-source"  placeholder="支出用途"></input><span style="color: red"> *</span><br><br>
@@ -109,8 +112,10 @@
                             <input type="submit" value="提交" class="submit-btn" ></input>
                             </fieldset>
                         </form>
+                            </div>
                     </div>
                     <div name="add">
+                        <div align="center">
                     <form id="form2" action="" method="post">
                         <fieldset>
                             <legend><h4>添加记录</h4></legend>
@@ -119,7 +124,7 @@
                                                 <option value="衣食住行">衣食住行</option>
                                                 <option value="医疗">医疗</option>
                                                 <option value="其他">其他</option>
-                                            </select><br><br>
+                                            </select><span style="color: red"> *</span><br><br>
                             支出人员:<input type="text" name="name" id="form2-name"  placeholder="支出人员"></input><span style="color: red"> *</span><br><br>
                             支出金额:<input type="text" name="num" id="form2-num" placeholder="金额"></input><span style="color: red"> *</span><br><br>
                             支出日期:<input class="date" type="text" name="date" id="form2-date" placeholder="支出日期" readonly="readonly"><span style="color: red"> *</span><br><br>
@@ -128,6 +133,7 @@
                             <input type="submit" value="提交" class="submit-btn" ></input>
                             </fieldset>
                         </form>
+                            </div>
                     </div>
         </div>
         </div>

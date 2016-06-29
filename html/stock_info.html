@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/financial.css">
     <!--[if lte IE 9]>
     <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="../js/selectivizr-master/selectivizr.js"></script>
@@ -60,17 +61,18 @@
             </nav>
             <ul class=third-level>
                 <li class=""><a href="stock_list.html">持有股票列表</a></li>
-                <li class=""><a href="stock_add.html">新建股票信息</a></li>
-                <li class="current" alt="stock_info"><a href="stock_info.html">持有股票列表</a></li>
+                <li class=""><a href="stock_add.html">添加股票</a></li>
+                <li class=""><a href="stock_holdAdd.html">添加持股</a></li>
+                <li class="current" alt="stock_info"><a href="stock_info.html">股票信息</a></li>
                 <li class="fix"></li>
             </ul>
             <div id="what">
                 <div name="stock_info">
                     <br><br>
-                    <form id="form1" action="" method="get">
+                   <!--  <form id="form1" action="" method="get">
                         <input type="text" name="date" id="form1-date" placeholder="按日期搜索">
                         <input type="submit" value="搜索" class="search-btn">
-                    </form>
+                    </form> -->
                     <table class="table table-striped">
                         <caption><h3 style="text-align: center;">股票详情</h3></caption>
                         <thread>
@@ -82,7 +84,7 @@
                             </tr>
                         </thread>
                         <tbody >
-                        <tr ><td>pg游戏</td><td>12312</td><td>11111.1 </td><td><a href="">刷新</a></td></tr>
+                        <tr ><td>pg游戏</td><td>12312</td><td>11111.1 </td><td><a href="./stock_change.html">修改</a></td></tr>
                         </tbody>
                     </table>
                     <table class="table table-striped">
@@ -92,19 +94,26 @@
                                 <th>持有人</th>
                                 <th>持有股份</th>
                                 <th>总计</th>
+                                <th>操作</th>
                             </tr>
                         </thread>
+
                         <tbody >
-                        <tr ><td>Son</td><td>1000</td><td>111100</td></tr>
-                        <tr ><td>Cousin</td><td>100</td><td>1110</td></tr>
+                        <tr >
+                            <td>Son</td><td>1000</td><td>111100</td>
+                            <td>
+                                    <a href="stock_holdChange.html">修改</a>
+                                    <a href="">删除</a>
+                                </td>
+                        </tr>
                         </tbody>
                     </table>
                     <div align="center">
-                        <button type="submit" class="btn btn-success" href="stock_list.html">返回股票列表</button>
-                        <button type="submit" class="btn bg-warning" href="stock_list.html">确认股票修改</button>
+                        <a href="stock_list.html" class="return">返回股票列表</a>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
     <br><br>
@@ -115,13 +124,5 @@
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../jedate/jedate.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript">
-        jeDate({
-            dateCell:"#form1-date",
-            format:"YYYY-MM-DD",
-            isTime:false,
-            minDate:"1975-00-00"
-        })
-    </script>
 </body>
 </html>

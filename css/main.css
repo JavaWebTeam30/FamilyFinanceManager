@@ -17,9 +17,11 @@ body{
 #right{
     position: relative;
     width: 70%;
-    height: 600px;
+    min-height: 600px;
+    height: auto;
     float: right;
     background-color: rgba(255,255,255,0.8);
+    margin-bottom: 200px;
 }
 ul.one-level,ul.tow-level{
     margin:0px;
