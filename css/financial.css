@@ -37,6 +37,7 @@ a.return:hover{
     background-color: steelblue;
 }
 #reset-btn{
+    text-align: center;
     width: 80px;
     height: 30px;
     font-size: medium;
@@ -48,4 +49,10 @@ a.return:hover{
 }
 #reset-btn:hover{
     background-color: #122b40;
+}
+textarea{
+    border: 1px solid lightgray;
+}
+textarea:focus{
+    border: 1px solid lightseagreen;
 }

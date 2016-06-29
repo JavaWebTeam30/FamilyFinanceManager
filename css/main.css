@@ -18,7 +18,6 @@ body{
     position: relative;
     width: 70%;
     min-height: 600px;
-    height: auto;
     float: right;
     background-color: rgba(255,255,255,0.8);
     margin-bottom: 200px;
@@ -116,7 +115,7 @@ ul.third-level li.current a{
 }
 
 #what>div{
-    position: absolute;
+    position: relative;
     width: 100%;
 }
 
