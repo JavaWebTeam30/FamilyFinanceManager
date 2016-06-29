@@ -17,7 +17,7 @@
 </head>
 <body>
     <header>
-        <div id="logo"><img src="../img/logo.png"></div>
+        <div id="logo"><img src="../img/logo.png" alt=""></div>
         <div id="system-title">家庭理财系统</div>
         <div id="sign-out"><img src="../img/sign_out.png"> 注销</div>
     </header>
@@ -28,7 +28,7 @@
                 <li>
                     <span><img src="../img/person.png"> 用 户 管 理</span>
                     <ul class="tow-level">
-                        <li><a href="#">用户个人信息管理</a></li>
+                        <li><a href="./userManager.html">用户个人信息管理</a></li>
                         <li><a href="./newUser.html">用户管理</a></li>
                     </ul>
                 </li>
@@ -42,13 +42,13 @@
                 <li>
                     <span><img src="../img/finance.png"> 财 务 管 理</span>
                     <ul class="tow-level">
-                        <li><a href="#">证券账户管理</a></li>
-                        <li><a href="#">持股管理</a></li>
-                        <li><a href="#">证券流水帐管理</a></li>
+                        <li><a href="./financial_system.html">证券账户管理</a></li>
+                        <li><a href="./stock_list.html">持股管理</a></li>
+                        <li><a href="./securitiesItem.html">证券流水帐管理</a></li>
                     </ul>
                 </li>
                 <li>
-                    <span><a href="#"><img src="../img/report.png"> 报 表 管 理</a></span>
+                    <span><a href="./report.html"><img src="../img/report.png"> 报 表 管 理</a></span>
                 </li>
             </ul>
         </div>
@@ -64,7 +64,7 @@
                 </nav>
                 <ul class=third-level>
                     <li class=""><a href="./newUser.html">新建用户</a></li>
-					<li class="current"><a href="./alterUser.html">修改用户信息</a></li>
+	       <li class="current" alt="alterUser"><a href="./alterUser.html">修改用户信息</a></li>
                     <li class=""><a href="./queryUser.html">查询用户信息</a></li>
                     <li class=""><a href="./deleteUser.html">删除用户</a></li>
                     <li class="fix"></li>
@@ -72,6 +72,7 @@
                 <div id="what">
                     <br><br>
                 		<div>
+                		<div name="alterUser">
 							<form action="#" id="alter-form" method="post">
 								<input type="text" id="username" placeholder="请输入用户名" tabindex="2"></input><br>
 								<input type="password" id="password" placeholder="请输入密码" tabindex="2"></input><br>
