@@ -60,6 +60,7 @@
             <ul class=third-level>
                 <li class=""><a href="financial_system.html">证券帐户信息列表</a></li>
                 <li class=""><a href="financial_addaccount.html">新建证券帐户信息</a></li>
+                <li class=""><a href="financial_changeaccount.html">修改证券账户信息</a></li>
                 <li class="current" alt="accountinfo"><a href="financial_system.html">证券帐户信息详情</a></li>
                 <li class="fix"></li>
             </ul>
@@ -84,17 +85,21 @@
                         <thread>
                             <tr>
                                 <th>股票名称</th>
+                                <th>股票代号</th>
                                 <th>持有股份</th>
                                 <th>股价</th>
-                                <th>总计</th>
                                 <th>操作</th>
                             </tr>
                         </thread>
                         <tbody >
-                        <tr ><td>30科技</td><td>1000</td><td>111.1 </td><td>111100</td><td><a href="">查看股票</a></td></tr>
-                        <tr ><td>pg游戏</td><td>100</td><td>11.1 </td><td>1110</td><td><a href="">查看股票</a></td></tr>
+                        <tr ><td>30科技</td><td>12312</td><td>1000</td><td>111.1 </td><td><a href="">查看股票</a></td><td><a href="">修改股票</a></td></tr>
+                        <tr ><td>pg游戏</td><td>32431</td><td>100</td><td>11.1 </td><td><a href="">查看股票</a></td><td><a href="">修改股票</a></td></tr>
                         </tbody>
                     </table>
+                    <div align="center">
+                        <label>总计</label>
+                        <output aria-autocomplete="inline">投资总值:112210.0</output>
+                    </div><br>
                     <div align="center">
                         <button type="submit" class="btn btn-success" href="financial_system.html">返回账户列表</button>
                         <button type="submit" class="btn bg-warning" href="financial_system.html">确认账户修改</button>
