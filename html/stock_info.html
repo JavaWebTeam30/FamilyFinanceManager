@@ -67,10 +67,10 @@
             <div id="what">
                 <div name="stock_info">
                     <br><br>
-                    <form id="form1" action="" method="get">
+                   <!--  <form id="form1" action="" method="get">
                         <input type="text" name="date" id="form1-date" placeholder="按日期搜索">
                         <input type="submit" value="搜索" class="search-btn">
-                    </form>
+                    </form> -->
                     <table class="table table-striped">
                         <caption><h3 style="text-align: center;">股票详情</h3></caption>
                         <thread>
@@ -92,16 +92,30 @@
                                 <th>持有人</th>
                                 <th>持有股份</th>
                                 <th>总计</th>
+                                <th>操作</th>
                             </tr>
                         </thread>
+
                         <tbody >
-                        <tr ><td>Son</td><td>1000</td><td>111100</td></tr>
-                        <tr ><td>Cousin</td><td>100</td><td>1110</td></tr>
+                        <tr >
+                            <td>Son</td><td>1000</td><td>111100</td>
+                            <td>
+                                    <button type="submit" class="btn btn-success">修改</button>
+                                    <button type="button" class="btn btn-danger">删除</button>
+                                </td>
+                        </tr>
+
+                        <tr >
+                            <td>Cousin</td><td>100</td><td>1110</td>
+                            <td>
+                                    <button type="submit" class="btn btn-success">修改</button>
+                                    <button type="button" class="btn btn-danger">删除</button>
+                                </td>
+                        </tr>
                         </tbody>
                     </table>
                     <div align="center">
                         <button type="submit" class="btn btn-success" href="stock_list.html">返回股票列表</button>
-                        <button type="submit" class="btn bg-warning" href="stock_list.html">确认股票修改</button>
                     </div>
                 </div>
             </div>
