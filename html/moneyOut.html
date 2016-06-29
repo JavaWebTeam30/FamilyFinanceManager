@@ -17,7 +17,7 @@
 </head>
 <body>
     <header>
-        <div id="logo"><img src="../img/logo.png"></div>
+        <div id="logo"><img src="../img/logo.png" alt=""></div>
         <div id="system-title">家庭理财系统</div>
         <div id="sign-out"><img src="../img/sign_out.png"> 注销</div>
     </header>
@@ -44,11 +44,11 @@
                     <ul class="tow-level">
                         <li><a href="#">证券账户管理</a></li>
                         <li><a href="#">持股管理</a></li>
-                        <li><a href="#">证券流水帐管理</a></li>
+                        <li><a href="./securitiesItem.html">证券流水帐管理</a></li>
                     </ul>
                 </li>
                 <li>
-                    <span><a href="#"><img src="../img/report.png"> 报 表 管 理</a></span>
+                    <span><a href="./report.html"><img src="../img/report.png"> 报 表 管 理</a></span>
                 </li>
             </ul>
         </div>
@@ -59,19 +59,22 @@
                 <span class="nav-third"></span>
                 </nav>
                 <ul class=third-level>
-                    <li class="current"><a href="">支出列表</a></li>
+                    <li class="current" alt="outCome-list"><a href="javascript:;">支出列表</a></li>
+                    <li class="" alt="modify"><a href="javascript:;">修改支出条目</a></li>
                     <li class="fix"></li>
                 </ul>
                 <div id="what">
-                    <br><br>
-                    <form id="form1" action="" method="get">
-                            <input type="text" name="date" id="form1-date" placeholder="按日期搜索">
+                    <div name="outCome-list">
+                        <br><br>
+                        <form id="form1" action="" method="get">
+                            <input type="text" name="date" id="form1-date" placeholder="按日期搜索" readonly="readonly">
                             <input type="submit" value="搜索" class="search-btn">
                         </form>
                         <table class="table table-striped">                          
                              <caption><h3 style="text-align: center;">支出明细<h3></caption>
                             <thread>
                                 <tr>
+                                    <th>ID</th>
                                     <th>名称</th>
                                     <th>金额</th>
                                     <th>时间</th>
@@ -79,8 +82,8 @@
                                 </tr>
                             </thread>
                             <tbody >
-                                <tr ><td>买菜</td><td>50</td><td>2016-06-29 </td><td><a href="">修改</a> <a href="">删除</a></td></tr>
-                                <tr><td>买书</td><td>120</td><td>2016-06-31</td><td><a href="">修改</a> <a href="">删除</a></td></tr>
+                                <tr ><td>0001</td><td>买菜</td><td>50</td><td>2016-06-29 </td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
+                                <tr><td>0002</td><td>买书</td><td>120</td><td>2016-06-31</td><td><a class="modify" href="javascript:;">修改</a> <a href="">删除</a></td></tr>
                             </tbody>
                         </table>
                         <form id=form2 action="" method="get">
@@ -91,6 +94,18 @@
                             <input type="submit" value="提交" class="search-btn" ></input>
                             </fieldset>
                         </form>
+                    </div>
+                     <div name="modify">
+                        <form id="form3"     action="" method="get">
+                            <fieldset>
+                            <legend><h4>修改记录</h4></legend>
+                            编号:<input type="text" name="ID" id="form3-ID" placeholder="记录ID"></input><br><br>
+                            名称:<input type="text" name="name" id="form3-name" placeholder="收入来源"></input><br><br>
+                            金额:<input type="text" name="num" id="form3-num" placeholder="金额"></input><br><br>
+                            <input type="submit" value="提交" class="search-btn" ></input>
+                            </fieldset>
+                        </form>
+                    </div>
         </div>
         </div>
     </div>
@@ -102,6 +117,7 @@
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../jedate/jedate.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/money.js"></script>
     <script type="text/javascript">
         jeDate({
             dateCell:"#form1-date",
