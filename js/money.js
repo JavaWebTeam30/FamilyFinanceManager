@@ -12,9 +12,23 @@ $(document).ready(function(){
     $("a.modify").click(modifyRceord);
     $("a.delete").click(function () {
         if(confirm("是否确认删除？")){
-            window.location.replace("")
+            $.get("",{},function (data,status) {
+                if(data=="true"){
+                    alert("已成功删除");
+                    $(this).parent().parent().remove();
+                }else{
+                    alert("删除失败");
+                }
+            });
         }else{
             return false;
         }
-    })
+    });
+    $("#form1").unbind("submit");
+    $("#form1").submit(function (){
+        if(!$("#form1-date").val()&&!$("#form1-name").val()){
+            alert("至少输入一个搜索条件");
+            return false;
+        }
+    });
 });

@@ -63,7 +63,7 @@ header{
 #login-form a{
     color: white;
 }
-#username,#password,#password-again{
+#username,#password,#password-again,#userID{
     color: black;
     display: block; 
     border:1px solid lightgray;
@@ -73,7 +73,7 @@ header{
     background: rgba(255,255,255,0.9);
     transition: all 0.2s linear;
 }
-#username:focus,#password:focus,#password-again:focus{
+#username:focus,#password:focus,#password-again:focus,#userID:focus{
     border: 1px solid lightseagreen;
 }
 p.wrong-tip{

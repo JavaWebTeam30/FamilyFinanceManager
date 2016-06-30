@@ -14,14 +14,15 @@
 </head>
 <body>
     <header>
-        <div id="logo"><img src="../img/logo.png" alt=""></div>
-        <div id="system-title">家庭理财系统</div>
+<!--         <div id="logo"><img src="../img/logo.png" alt=""></div>
+ -->        <div id="system-title">家庭理财系统</div>
     </header>
     <div id=center>
-        <form id="register-form" action="login.html" method="get" autocomplete="off">
+        <form id="register-form" action="userManager.html" method="get" autocomplete="off">
              <input type="text" id="username" placeholder="请输入用户名" tabindex="2"></input><br>
              <input type="password" id="password" placeholder="请输入密码" tabindex="2"></input><br>
-             <input type="password" id="password-again" placeholder="再次输入密码" tabindex="2"></input><br>
+             <input type="password" id="password-again" placeholder="再次输入密码" tabindex="2"></input><br> 
+             <input type="text" id="userID" placeholder="身份证号" tabindex="2">
             <p class="wrong-tip"></p>
             <input type="submit" value="注 册" id="submit"></input>
         </form>
@@ -40,8 +41,8 @@
             }
         });
         $("#register-form").submit(function(event){
-            if(!$("#username").val()){
-               $("#register-form p.wrong-tip").text("用户名不能为空");
+            if(!$("#username").val()||!$("#userID").val()){
+               $("#register-form p.wrong-tip").text("必填项不能为空");
                 return false 
             }
             if($("#password").val()!=$("#password-again").val()){

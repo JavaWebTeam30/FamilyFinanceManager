@@ -18,8 +18,8 @@
 </head>
 <body>
     <header>
-        <div id="logo"><img src="../img/logo.png" alt=""></div>
-        <div id="system-title">家庭理财系统</div>
+<!--         <div id="logo"><img src="../img/logo.png" alt=""></div>
+ -->        <div id="system-title">家庭理财系统</div>
         <div id="sign-out"><a href="login.html"><img src="../img/sign_out.png"> 注销</a></div>
     </header>
     <div id="center">
@@ -122,8 +122,12 @@
                             股票价格:<input type="text" name="danjia" placeholder="股价"><span style="color: red"> *</span><br><br>
                             交易股数:<input type="text" name="count" placeholder="交易量"><span style="color: red"> *</span><br><br>
                             交易时间:<input type="text" name="time" class="datainp" id="tradetime" placeholder="选择时间" readonly="readonly"><span style="color: red"> *</span><br><br>
-                            交易类型:<input type="radio" name="selecttype" value="sell" checked="checked"> 卖出
-                                    <input type="radio" name="selecttype" value="buy"> 购入<br><br>
+                            交易类型:<select>
+                                        <option value="all">所有</option>
+                                        <option value="buy">购入</option>
+                                        <option value="sell">卖出</option>
+                            </select>
+                                    <br><br>
                                     <input type="submit" class="submit-btn" value="确认修改">
                         </form>
                             </div>
