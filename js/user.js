@@ -21,6 +21,7 @@ $(document).ready(function(){
             return false;
         }
     });
+    $("#form1").unbind("submit");
     $("#form1").submit(function (){
         if(!$("#form1-ID").val()&&!$("#form1-name").val()){
             alert("至少输入一个搜索条件");
