@@ -76,7 +76,7 @@
                             </div>
                         <table class="table table-striped">
                              <caption><h3 style="text-align: center;">用户名单</h3></caption>
-                            <thread>
+                            <tbody>
                                 <tr>
                                     <th>姓名</th>
                                     <th>密码</th>
@@ -87,10 +87,11 @@
                                     <th>身份证号</th>
                                      <th>操作</th>
                                 </tr>
-                            </thread>
+                            </tbody>
                             <tbody >
-                                <tr><td>小明</td><td>123321123</td><td>xxxx-xxxx-xxxx-xxx</td><td>6000</td><td>儿子 </td><td>25</td><td>00000000</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
-                                <tr><td>大明</td><td>123321123</td></td><td>xxxx-xxxx-xxxx-xxx</td><td>8000</td><td>父亲</td><td>46</td><td>11111111</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
+
+                                <tr id="00000000"><td>小明</td><td>123321123</td><td>xxxx-xxxx-xxxx-xxx</td><td>6000</td><td>儿子 </td><td>25</td><td>00000000</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
+                                <tr id="11111111"><td>大明</td><td>123321123</td></td><td>xxxx-xxxx-xxxx-xxx</td><td>8000</td><td>父亲</td><td>46</td><td>11111111</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -106,7 +107,9 @@
                             家庭称呼:<input type="text" id="form3-call" placeholder="家庭称呼"><span style="color: red"> *</span><br><br>
                             用户年龄:<input type="text" id="form3-age"  placeholder="年龄"><span style="color: red"> *</span><br><br>
                             身份证号:<input type="text" id="form3-ID" placeholder="身份证号"><span style="color: red"> *</span><br><br>
-                            <input type="submit" value="提交" class="submit-btn" >
+                                <p class="wrong-tip"></p>
+                                <p class="right-tip"></p>
+                                <input type="submit" value="提交" class="submit-btn" >
                             </fieldset>
                         </form>
                             </div>
@@ -123,6 +126,8 @@
                             家庭称呼:<input type="text" id="form2-call" placeholder="家庭称呼"><span style="color: red"> *</span><br><br>
                             用户年龄:<input type="text" id="form2-age"  placeholder="年龄"><span style="color: red"> *</span><br><br>
                             身份证号:<input type="text" id="form2-ID" placeholder="身份证号"><span style="color: red"> *</span><br><br>
+                                <p class="wrong-tip"></p>
+                                <p class="right-tip"></p>
                             <input type="submit" value="提交" class="submit-btn" >
                             </fieldset>
                         </form>

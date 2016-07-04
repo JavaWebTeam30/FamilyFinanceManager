@@ -59,32 +59,27 @@
             </nav>
             <ul class=third-level>
                 <li class=""><a href="stock_list.html">持有股票列表</a></li>
-                <li class="current" alt="stock_add"><a href="stock_add.html">新建股票</a></li>
-                <li class=""><a href="stock_holdAdd.html">添加持股</a></li>
+                <li class="current" alt="stock_add"><a href="stock_add.html">添加股票</a></li>
                 <li class="fix"></li>
             </ul>
 <div id="what">
     <div name="stock_add">
         <div align="center"><br>
             <form class="form-group-lg" action="stock_list.html" name="finance_addform" method="post" enctype="multipart/form-data">
-                <legend>新建股票信息</legend>
-                <div class="form-group" align="center">
+                <legend>添加股票信息</legend>
                     证券账户:<select >
-                		<option value="shanghai_A">上海A股</option>
+                		<option value="shanghai_A" selected>上海A股</option>
                 		<option value="shanghai_B">上海B股</option>
                 		<option value="shenzhen_A">深圳A股</option>
                 		<option value="shenzhen_B">深圳B股</option>
                 	</select><span style="color: red"> *</span><br><br>
-                </div>
-                <div  align="center">
                     股票名称:<input type="text"  id="stockName" placeholder="股票名称"><span style="color: red"> *</span><br><br>
-                </div>
-
-                <div class="form-group" align="center">
                     股票代号:<input type="text"  id="stockID" placeholder="股票代号"><span style="color: red"> *</span><br><br>
-                </div>
-
+                    持有账户:<input type="text" placeholder="持有账户"><span style="color: red"> *</span><br><br>
+                    持有股份:<input type="text" placeholder="持有股份"><span style="color: red"> *</span><br><br>
                 <div align="center">
+                    <p class="wrong-tip"></p>
+                    <p class="right-tip"></p>
                     <input type="submit" class="submit-btn" value="提 交">
                 </div>
             </form>

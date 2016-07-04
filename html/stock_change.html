@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/money.css">
+    <link rel="stylesheet" type="text/css" href="../css/financial.css">
     <!--[if lte IE 9]>
     <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="../js/selectivizr-master/selectivizr.js"></script>
@@ -61,26 +61,28 @@
             </nav>
             <ul class=third-level>
                 <li class=""><a href="stock_list.html">持有股票列表</a></li>
-                <li class=""><a href="stock_add.html">新建股票信息</a></li>
+                <li class=""><a href="stock_add.html">添加股票</a></li>
                 <li class="current" alt="stock_change"><a href="stock_change.html">修改股票信息</a></li>
                 <li class="fix"></li>
             </ul>
             <div id="what">
                 <div name="stock_change">
                  <br>
-                 <div style="width: 30%;margin: auto">
+                 <div align="center">
                 <form id="form1" method="post" action="stock_info.html" style="">
                     <fieldset>
                         <legend>股票信息修改</legend>
-                        股票名称:<input type="text" placeholder="股票名称" value="pg游戏"><br><br>
-                        股票代号:<input type="text" placeholder="股票代号" value=" 12321"><br><br>
-
-                        股票市场：<select style="border: 1px solid lightgray">
-                		<option value="shanghai_A">上海A股</option>
+                        股票名称:<input type="text" placeholder="股票名称" name="name"><span style="color: red"> *</span><br><br>
+                        股票代号:<input type="text" placeholder="股票代号" name="ID"><span style="color: red"> *</span><br><br>
+                        股票价格:<input type="text" placeholder="股票价格" name="price"><span style="color: red"> *</span><br><br>
+                        股票市场:<select style="border: 1px solid lightgray;width:150px;">
+                		<option value="shanghai_A" selected>上海A股</option>
                 		<option value="shanghai_B">上海B股</option>
                 		<option value="shenzhen_A">深圳A股</option>
                 		<option value="shenzhen_B">深圳B股</option>
-                	    </select><br><br>
+                	    </select><span style="color: red"> *</span><br><br>
+                        <p class="right-tip"></p>
+                        <p class="wrong-tip"></p>
                         <input type="submit" value="提交" class="submit-btn">
                     </fieldset>
                 </form>

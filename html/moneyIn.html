@@ -90,14 +90,14 @@
                                 </tr>
                             </thread>
                             <tbody >
-                                <tr ><td>0001</td><td>工资</td><td>Dad</td><td>2000</td><td>2016-06-29 </td><td>公司</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
-                                <tr><td>0002</td><td>奖金</td><td>Dad</td><td>3000</td><td>2016-06-31</td><td>公司</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
+                                <tr id="0001"><td>0001</td><td>工资</td><td>Dad</td><td>2000</td><td>2016-06-29 </td><td>公司</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
+                                <tr id="0002"><td>0002</td><td>奖金</td><td>Dad</td><td>3000</td><td>2016-06-31</td><td>公司</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
                             </tbody>
                         </table>
                         </div>
                     <div name="modify">
                         <div align="center">
-                        <form id="form3"  action="" method="get">
+                        <form id="form3"  action="" method="post">
                             <fieldset>
                             <legend><h4>修改记录</h4></legend>
                             收入类型:<select name="type" id="form3-type">
@@ -106,13 +106,15 @@
                                                 <option value="分红">分红</option>
                                                 <option value="奖金">奖金</option>
                                             </select><span style="color: red"> *</span><br><br>
-                            记录编号:<input type="text" name="ID" id="form3-ID" placeholder="记录编号"></input><span style="color: red"> *</span><br><br>
+                            记录编号:<input type="text" name="ID" id="form3-ID" placeholder="记录编号"><span style="color: red"> *</span><br><br>
                             收入人员:<input type="text" name="name" id="form3-name" placeholder=" 收入人员"></input><span style="color: red"> *</span><br><br>
                             收入金额:<input type="text" name="num" id="form3-num" placeholder="金额"></input><span style="color: red"> *</span><br><br>
                             收入日期:<input class="date" type="text" name="date" id="form3-date" placeholder="收入日期" readonly="readonly"><span style="color: red"> *</span><br><br>
                             收入来源:<input type="text" name="source" id="form3-source"  placeholder="收入来源"></input><span style="color: red"> *</span><br><br>
                             相关备注:<input type="text" name="remark" id="form3-remark" placeholder="相关备注"></input><span style="color: red"> *</span><br><br>
-                            <input type="submit" value="提交" class="submit-btn" ></input>
+                                <p class="wrong-tip"></p>
+                                <p class="right-tip"></p>
+                                <input type="submit" value="提交" class="submit-btn" ></input>
                             </fieldset>
                         </form>
                             </div>

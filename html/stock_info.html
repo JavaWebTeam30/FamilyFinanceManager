@@ -62,7 +62,6 @@
             <ul class=third-level>
                 <li class=""><a href="stock_list.html">持有股票列表</a></li>
                 <li class=""><a href="stock_add.html">添加股票</a></li>
-                <li class=""><a href="stock_holdAdd.html">添加持股</a></li>
                 <li class="current" alt="stock_info"><a href="stock_info.html">股票信息</a></li>
                 <li class="fix"></li>
             </ul>
@@ -84,9 +83,14 @@
                             </tr>
                         </thread>
                         <tbody >
-                        <tr ><td>pg游戏</td><td>12312</td><td>11111.1 </td><td><a href="./stock_change.html">修改</a></td></tr>
+                        <tr id="stock-info"><td>pg游戏</td><td>12312</td><td>11</td><td><a href="javascript:;" id="change_stock">修改</a></td></tr>
                         </tbody>
                     </table>
+                    <form id="stock-info-form" action="stock_change.html" method="post" style="display: none">
+                        <input type="text" name="name" value="pg游戏">
+                        <input type="text" name="ID" value="12312">
+                        <input type="text" name="price" value="11">
+                    </form>
                     <table class="table table-striped">
                         <caption><h3 style="text-align: center;">账户持股详情</h3></caption>
                         <thread>
@@ -99,15 +103,21 @@
                         </thread>
 
                         <tbody >
-                        <tr >
+                        <tr id="stock-hold">
                             <td>Son</td><td>1000</td><td>111100</td>
                             <td>
-                                    <a href="stock_holdChange.html">修改</a>
+                                    <a href="stock_holdChange.html" id="change_hold">修改</a>
                                     <a href="javascript:;" class="delete">删除</a>
-                                </td>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
+                    <form id="stock-hold-form" action="stock_holdChange.html" method="post" style="display: none">
+                        <input type="text" name="name" value="pg游戏">
+                        <input type="text" name="ID" value="12312">
+                        <input type="text" name="person" value="son">
+                        <input type="text" name="count" value="1000">
+                    </form>
                     <div align="center">
                         <a href="stock_list.html" class="return">返回股票列表</a>
                     </div>
@@ -124,6 +134,6 @@
     <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../jedate/jedate.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
-    <script type="text/javascript" src="../js/ficance.js"></script>
+    <script type="text/javascript" src="../js/stock.js"></script>
 </body>
 </html>

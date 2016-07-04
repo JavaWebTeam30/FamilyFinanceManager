@@ -90,8 +90,8 @@
                                 </tr>
                             </thread>
                             <tbody >
-                                <tr><td>0001</td><td>税收</td><td>Dad</td><td>500</td><td>2016-06-29 </td><td>缴税</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
-                                <tr><td>0002</td><td>医疗</td><td>son</td><td>100</td><td>2016-06-31</td><td>看病</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
+                                <tr id="0001"><td>0001</td><td>税收</td><td>Dad</td><td>500</td><td>2016-06-29 </td><td>缴税</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
+                                <tr id="0002"><td>0002</td><td>医疗</td><td>son</td><td>100</td><td>2016-06-31</td><td>看病</td><td>无</td><td><a class="modify" href="javascript:;">修改</a> <a href="javascript:;" class="delete">删除</a></td></tr>
                             </tbody>
                         </table>
                         </div>
@@ -112,7 +112,9 @@
                             支出日期:<input class="date" type="text" name="date" id="form3-date" placeholder="支出日期" readonly="readonly"><span style="color: red"> *</span><br><br>
                             支出用途:<input type="text" name="source" id="form3-source"  placeholder="支出用途"></input><span style="color: red"> *</span><br><br>
                             相关备注:<input type="text" name="remark" id="form3-remark" placeholder="相关备注"></input><span style="color: red"> *</span><br><br>
-                            <input type="submit" value="提交" class="submit-btn" ></input>
+                                <p class="wrong-tip"></p>
+                                <p class="right-tip"></p>
+                                <input type="submit" value="提交" class="submit-btn" ></input>
                             </fieldset>
                         </form>
                             </div>
@@ -133,6 +135,8 @@
                             支出日期:<input class="date" type="text" name="date" id="form2-date" placeholder="支出日期" readonly="readonly"><span style="color: red"> *</span><br><br>
                             支出用途:<input type="text" name="source" id="form2-source" placeholder="支出用途"></input><span style="color: red"> *</span><br><br>
                             相关备注:<input type="text" name="remark" id="form2-remark"  placeholder="相关备注"></input><span style="color: red"> *</span><br><br>
+                                <p class="wrong-tip"></p>
+                                <p class="right-tip"></p>
                             <input type="submit" value="提交" class="submit-btn" ></input>
                             </fieldset>
                         </form>
@@ -152,7 +156,7 @@
     <script type="text/javascript" src="../js/money.js"></script>
     <script type="text/javascript">
         jeDate({
-            dateCell:"#form1-date",
+            dateCell:".date",
             format:"YYYY-MM-DD",
             isTime:false, 
             minDate:"1975-00-00"

@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../jedate/skin/jedate.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/money.css">
+    <link rel="stylesheet" type="text/css" href="../css/financial.css">
     <!--[if lte IE 9]>
     <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
     <script src="../js/selectivizr-master/selectivizr.js"></script>
@@ -61,8 +61,7 @@
             </nav>
             <ul class=third-level>
                 <li class=""><a href="stock_list.html">持有股票列表</a></li>
-                <li class=""><a href="stock_add.html">新建股票信息</a></li>
-                <li class=""><a href="stock_holdAdd.html">添加持股</a></li>
+                <li class=""><a href="stock_add.html">添加股票</a></li>
                 <li class="current" alt="stock_holdChange"><a href="stock_holdChange.html">修改持股信息</a></li>
                 <li class="fix"></li>
             </ul>
@@ -73,9 +72,12 @@
                 <form id="form2" method="post" action="./stock_info.html">
                     <fieldset>
                         <legend>持股信息修改</legend>
-                        股票名称:<input type="text" readonly="readonly" value="pg游戏"><span style="color: red"> *</span><br><br>
-                        持有用户:<input type="text" placeholder="持有用户" value="son"><span style="color: red"> *</span><br><br>
-                        持有股份:<input type="text" placeholder="持有股份" value="5000"><span style="color: red"> *</span><br><br>
+                                <input type="text" name="ID" style="display: none">
+                        股票名称:<input type="text" placeholder="股票名称" readonly="readonly" name="name" value=""><span style="color: red"> *</span><br><br>
+                        持有用户:<input type="text" placeholder="持有用户" name="person"><span style="color: red"> *</span><br><br>
+                        持有股份:<input type="text" placeholder="持有股份" name="count"><span style="color: red"> *</span><br><br>
+                        <p class="wrong-tip"></p>
+                        <p class="right-tip"></p>
                         <input type="submit" value="提交" class="submit-btn">
                     </fieldset>
                 </form>

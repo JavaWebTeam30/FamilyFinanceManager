@@ -80,6 +80,10 @@ p.wrong-tip{
     color: firebrick;
     font-size: 1.2em;
 }
+p.right-tip{
+    color:steelblue;
+    font-size: 1.2em;
+}
 #submit{
     display: block;
     width: 100%;

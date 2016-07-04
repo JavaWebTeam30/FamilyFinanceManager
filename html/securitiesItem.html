@@ -73,8 +73,8 @@
                                 证券账户:<input type="text" id="secuser" placeholder="证券账户名"><span style="color: red"> *</span><br><br>
                                 开始时间:<input class="datainp" id="startline" type="text" placeholder="开始时间" readonly><span style="color: red"> *</span><br><br>
                                 截止时间:<input class="datainp" id="endline" type="text" placeholder="截止时间" readonly><span style="color: red"> *</span><br><br>
-                                交易类型:<input type="radio" name="selecttype" value="sell" checked="checked"> 卖出
-                                        <input type="radio" name="selecttype" value="buy"> 购入<br>
+                                交易类型:<input type="radio" name="type" value="sell" checked="checked"> 卖出
+                                        <input type="radio" name="type" value="buy"> 购入<br>
 
                                 <input type="submit" id="search" class="submit-btn"value="查询"><a href="javascript:;" id="reset-btn">重置</a>
                             </form>
@@ -95,7 +95,7 @@
                                 </tr>
                             </thread>
                             <tbody>
-                            <tr>
+                            <tr id="201607011">
                                 <td>201607011</td>
                                 <td>上海A股</td>
                                 <td>pg游戏</td>
@@ -115,19 +115,17 @@
                     <div name="updateaction">
                         <caption><h3 style="text-align: center;">修改证券流水账</h3></caption>
                         <div align="center">
-                        <form id="update-form" action="" method="post">
+                        <form id="modify-form" action="" method="post">
                             交易单号:<input type="text" name="ID" placeholder="交易单号" ><span style="color: red"> *</span><br><br>
                             证券账户:<input type="text" name="account" placeholder="证券账户"><span style="color: red"> *</span><br><br>
                             股票名称:<input type="text" name="stock" placeholder="股票名称"><span style="color: red"> *</span><br><br>
                             股票价格:<input type="text" name="danjia" placeholder="股价"><span style="color: red"> *</span><br><br>
                             交易股数:<input type="text" name="count" placeholder="交易量"><span style="color: red"> *</span><br><br>
                             交易时间:<input type="text" name="time" class="datainp" id="tradetime" placeholder="选择时间" readonly="readonly"><span style="color: red"> *</span><br><br>
-                            交易类型:<select>
-                                        <option value="all">所有</option>
-                                        <option value="buy">购入</option>
-                                        <option value="sell">卖出</option>
-                            </select>
-                                    <br><br>
+                            交易类型:<input type="radio" name="type" value="sell" checked="checked"> 卖出
+                                    <input type="radio" name="type" value="buy"> 购入<br><br>
+                                    <p class="wrong-tip"></p>
+                                    <p class="right-tip"></p>
                                     <input type="submit" class="submit-btn" value="确认修改">
                         </form>
                             </div>
@@ -138,12 +136,14 @@
                         <form id="add-form" action="" method="post">
                              交易单号:<input type="text" name="ID" placeholder="交易单号" ><span style="color: red"> *</span><br><br>
                             证券账户:<input type="text" name="account" placeholder="证券账户"><span style="color: red"> *</span><br><br>
-                            股票名称:<input type="text" name="stock_name" placeholder="股票名称"><span style="color: red"> *</span><br><br>
+                            股票名称:<input type="text" name="stock" placeholder="股票名称"><span style="color: red"> *</span><br><br>
                             股票价格:<input type="text" name="danjia" placeholder="股价"><span style="color: red"> *</span><br><br>
                             交易股数:<input type="text" name="count" placeholder="交易量"><span style="color: red"> *</span><br><br>
                             交易时间:<input type="text" name="time" class="datainp" id="tradetime" placeholder="选择时间"><span style="color: red"> *</span><br><br>
                             交易类型:<input type="radio" name="selecttype" value="sell" checked="checked"> 卖出
                                     <input type="radio" name="selecttype" value="buy"> 购入<br><br>
+                                    <p class="wrong-tip"></p>
+                                    <p class="right-tip"></p>
                                     <input type="submit" class="submit-btn" value="确认提交">
                         </form>
                             </div>

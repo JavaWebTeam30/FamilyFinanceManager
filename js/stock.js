@@ -1,9 +1,9 @@
 /**
- * Created by yang on 16-6-30.
+ * Created by yang on 16-7-4.
  */
 $(document).ready(function () {
-    var temp=$(this).parent().siblings();
     $("a.delete").click(function () {
+        var temp=$("#stock-info").children();
         if(confirm("是否确认删除？")){
             $.get("",{
                 service:"delete",
@@ -11,7 +11,7 @@ $(document).ready(function () {
             },function (data,status) {
                 if(data=="true"){
                     alert("已成功删除");
-                    $(this).parent().parent().remove();
+                    window.location.href="stock_list.html";
                 }else{
                     alert("删除失败");
                 }
@@ -19,5 +19,11 @@ $(document).ready(function () {
         }else{
             return false;
         }
+    });
+    $("#stock-info").click(function () {
+        $("#stock-info-form").submit();
+    })
+    $("#stock-hold").click(function () {
+        $("#stock-hold-form").submit();
     })
 });
