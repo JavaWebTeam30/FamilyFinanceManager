@@ -79,13 +79,15 @@ function doAdd() {
 }
 function doDeleteRecord() {
     var temp=$(this).parent().siblings();
+    var that=$(this).parent().parent();
     if(confirm("是否确认删除？")){
         $.get("",{service:"delete",
             name:temp.eq(7).text(),
             },function (data,status) {
-            if(data=="true"){
-                alert("已成功删除");
-                $(this).parent().parent().remove();
+                data=data.trim();
+                if(data=="true"){
+                    alert("已成功删除");
+                    that.remove();
 
             }else{
                 alert("删除失败");

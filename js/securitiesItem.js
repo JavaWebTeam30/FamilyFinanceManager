@@ -11,8 +11,6 @@ function modifyRceord(event){
     }else{
         $("#modify-form input[value='buy']").click();
     }
-
-
 }
 function doModify() {
     var oldID=$("#modify-form input[name='ID']").val();
@@ -65,7 +63,7 @@ function doAdd() {
         }
     }
      $.post("",{
-        service:"modify",
+        service:"add",
         id:$("#add-orm input[name='ID']").val(),
         account:$("#add-form input[name='account']").val(),
         stock:$("#add-form input[name='stock']").val(),
@@ -95,10 +93,12 @@ $(document).ready(function(){
     $("a.delete").click(function () {
         if(confirm("是否确认删除？")){
             var temp=$(this).parent().siblings();
+            var that=$(this).parent().parent();
             $.get("",{
                 service:'delete',
                 id:temp.eq(0).text(),
             },function (data,status) {
+                data=data.trim()
                 if(data=="true"){
                     alert("已成功删除");
                     $(this).parent().parent().remove();

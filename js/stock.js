@@ -9,6 +9,7 @@ $(document).ready(function () {
                 service:"delete",
                 id:temp.eq(1).text(),
             },function (data,status) {
+                data=data.trim()
                 if(data=="true"){
                     alert("已成功删除");
                     window.location.href="stock_list.html";

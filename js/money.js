@@ -89,6 +89,7 @@ $(document).ready(function(){
                 service:"delete",
                 id: temp.eq(0).text(),
             },function (data,status) {
+                data=data.trim()
                 if(data=="true"){
                     alert("已成功删除");
                     $(this).parent().parent().remove();
